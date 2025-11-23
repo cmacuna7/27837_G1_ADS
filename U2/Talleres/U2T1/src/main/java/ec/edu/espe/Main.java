@@ -1,5 +1,6 @@
-package ec.edu.espe.presentacion;
+package ec.edu.espe;
 
+import ec.edu.espe.presentacion.EstudianteUI;
 import javax.swing.SwingUtilities;
 
 /**
