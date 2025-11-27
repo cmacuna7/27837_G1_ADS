@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c34bb6ec-213a-479f-9bc9-7cb2720f8996" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README_PATRONES.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/U2T1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/datos/model/Estudiante.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/datos/repository/EstudianteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/datos/repository/observer/RepositoryObserver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/logica_negocio/EstudianteService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/logica_negocio/validation/EdadValidationStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/logica_negocio/validation/IdValidationStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/logica_negocio/validation/NombresValidationStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/logica_negocio/validation/ValidationContext.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/logica_negocio/validation/ValidationStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/presentacion/EstudianteUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/U2T1/ec/edu/espe/presentacion/EstudianteUI.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3621Lq0vR8UqJf0QLxNlekRX1wO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.28238.7" />
+        <option value="bundled-js-predefined-d6986cc7102b-a71380e98a7c-JavaScript-IU-252.28238.7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c34bb6ec-213a-479f-9bc9-7cb2720f8996" name="Changes" comment="" />
+      <created>1764189807387</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764189807387</updated>
+      <workItem from="1764189812573" duration="95000" />
+      <workItem from="1764209354837" duration="401000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
