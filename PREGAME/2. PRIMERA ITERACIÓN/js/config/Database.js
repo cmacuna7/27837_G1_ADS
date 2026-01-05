@@ -5,7 +5,7 @@
 class ConexionBD {
   static instancia = null;
   static DB_NAME = 'HealthyPlusDB';
-  static DB_VERSION = 1;
+  static DB_VERSION = 2; // Actualizado para incluir nuevos stores
 
   constructor() {
     if (ConexionBD.instancia) {
@@ -99,6 +99,38 @@ class ConexionBD {
         if (!db.objectStoreNames.contains('configuracion')) {
           db.createObjectStore('configuracion', { keyPath: 'clave' });
           console.log('Object Store "configuracion" creado');
+        }
+
+        // RF06: Object Store para Eventos de Toma (historial)
+        if (!db.objectStoreNames.contains('eventos_toma')) {
+          const eventosStore = db.createObjectStore('eventos_toma', {
+            keyPath: 'id',
+          });
+          eventosStore.createIndex('medicamentoId', 'medicamentoId', {
+            unique: false,
+          });
+          eventosStore.createIndex('horarioId', 'horarioId', { unique: false });
+          eventosStore.createIndex('fecha', 'fecha', { unique: false });
+          eventosStore.createIndex('tipo', 'tipo', { unique: false }); // 'tomado', 'omitido', 'pospuesto'
+          console.log('✅ Object Store "eventos_toma" creado (RF06)');
+        }
+
+        // RF07: Object Store para Síntomas
+        if (!db.objectStoreNames.contains('sintomas')) {
+          const sintomasStore = db.createObjectStore('sintomas', {
+            keyPath: 'id',
+          });
+          sintomasStore.createIndex('medicamentoId', 'medicamentoId', {
+            unique: false,
+          });
+          sintomasStore.createIndex('fecha', 'fecha', { unique: false });
+          sintomasStore.createIndex('categoria', 'categoria', {
+            unique: false,
+          });
+          sintomasStore.createIndex('intensidad', 'intensidad', {
+            unique: false,
+          });
+          console.log('✅ Object Store "sintomas" creado (RF07)');
         }
       };
     });
