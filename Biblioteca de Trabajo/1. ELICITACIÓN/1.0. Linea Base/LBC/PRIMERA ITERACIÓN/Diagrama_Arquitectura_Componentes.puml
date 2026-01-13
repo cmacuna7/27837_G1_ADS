@@ -1,0 +1,44 @@
+@startuml Healthy+ - Arquitectura MVC
+!theme plain
+skinparam linetype ortho
+skinparam componentStyle rectangle
+skinparam backgroundColor #ffffff
+
+title Healthy+ - Arquitectura MVC
+
+package "VIEW" #FFE4E1 {
+    component [VistaListaMedicamentos] as V
+}
+
+package "CONTROLLER" #E8F5E9 {
+    component [ControladorMedicamentos] as C1
+    component [ControladorFormulario] as C2
+    component [ControladorAlertas] as C3
+}
+
+package "MODEL" #E3F2FD {
+    component [Medicamento] as M
+}
+
+package "SERVICES" #FFF9C4 {
+    component [GestorAlmacenamiento] as S1
+    component [RelojSistema] as S2
+    component [Notificadores] as S3
+}
+
+package "DATA" #ECEFF1 {
+    database [IndexedDB] as DB
+}
+
+V --> C1 : editar/eliminar
+C1 --> M : valida
+C2 --> M : valida
+C1 --> S1 : CRUD
+C2 --> S1 : guardar
+C3 --> S2 : monitorea
+C3 --> S3 : alerta
+S1 --> DB : persiste
+M --> DB : almacena
+S2 --> S3 : notifica
+
+@enduml
