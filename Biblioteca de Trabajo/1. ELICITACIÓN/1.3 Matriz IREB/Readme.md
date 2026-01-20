@@ -22,10 +22,10 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Contenido Principal
 
-* Matriz de trazabilidad de requisitos
-* Vinculación entre requisitos y diseño
-* Análisis de cobertura de requisitos
-* Validación conforme a estándar IREB
+- Matriz de trazabilidad de requisitos
+- Vinculación entre requisitos y diseño
+- Análisis de cobertura de requisitos
+- Validación conforme a estándar IREB
 
 ## Fecha de inicio:
 
@@ -37,9 +37,10 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones de la Matriz IREB
 
-| Versión                     | Fecha      | Responsable    | Aprobado por      |
-|-----------------------------|------------|----------------|-------------------|
-| `Matriz_IREB_V1.0.3.xlsx`   | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda |
-| `Matriz_IREB_Informe.docx`  | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda |
+| Versión                           | Fecha      | Responsable       | Aprobado por                      |
+| --------------------------------- | ---------- | ----------------- | --------------------------------- |
+| `Matriz_IREB_V1.0.0.xlsx`         | 02/07/2025 | Abner Arboleda    | Marcelo Acuña y Christian Bonifaz |
+| `Matriz_IREB_V1.0.1.xlsx`         | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda    |
+| `Matriz_IREB_Informe_V1.0.0.docx` | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda    |
 
 Matriz de trazabilidad de requisitos con documentación complementaria que valida formalmente la especificación en la línea base de requisitos.
