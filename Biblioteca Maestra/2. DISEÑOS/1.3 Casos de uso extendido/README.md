@@ -1,7 +1,9 @@
-# 📌 Versiones y Variantes
+# Casos de Uso Extendido (CU)
 
-| **Código del ECS** | **Descripción del ECS**                                         | **Versión/Variante** | **Fecha de creación** | **Autor(es)**                                         | **Localización**                              | **Observaciones**                                                                 | **Variante de requisitos de usuario** | **Variante de plataforma**          |
-|--------------------|------------------------------------------------------------------|-----------------------|------------------------|-------------------------------------------------------|-----------------------------------------------|-----------------------------------------------------------------------------------|---------------------------------------|-------------------------------------|
-| CU                 | Diagrama de Casos de Uso de Contexto                             | V1.0.0                | 15/12/2025             | Marcelo Acuña, Abner Arboleda, Christian Bonifaz      | 27837_G1_ADS\MODELOS\2. DISEÑOS\1.3 Casos de uso extendido | G1HE-Diagrama de Casos de Uso de Contexto - Especificación del contexto del sistema Healthy+ | Español                               | Windows 11                          |
-| CU                 | Diagrama de Casos de Uso Extendido                               | V1.0.1                | 15/12/2025             | Marcelo Acuña, Abner Arboleda, Christian Bonifaz      | 27837_G1_ADS\MODELOS\2. DISEÑOS\1.3 Casos de uso extendido | G1HE-Diagrama de Casos de Uso - Especificación detallada de casos de uso del sistema | Español                               | Windows 11                          |
+| **Versión** | **Descripción** | **Autor** | **Aprobado por** |
+|-------------|-----------------|-----------|------------------|
+| `CU_V1.0.0.pdf` | Diagrama de Casos de Uso de Contexto - Especificación del contexto del sistema Healthy+ | Marcelo Acuña, Abner Arboleda, Christian Bonifaz | Marcelo Acuña |
+| `CU_V1.0.1.pdf` | Diagrama de Casos de Uso Extendido - Especificación detallada de casos de uso del sistema | Marcelo Acuña, Abner Arboleda, Christian Bonifaz | Abner Arboleda |
+
+Especificaciones de casos de uso que documentan las interacciones entre actores y el sistema Healthy+.
 

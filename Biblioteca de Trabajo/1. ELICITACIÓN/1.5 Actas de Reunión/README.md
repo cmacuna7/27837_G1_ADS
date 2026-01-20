@@ -40,6 +40,5 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 | Versión             | Fecha      | Responsable       | Aprobado por                         |
 |---------------------|------------|-------------------|--------------------------------------|
 | `Acta_Reunión_01.pdf` | 10/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz   |
-| `Acta_Reunión_01.mp4` | 10/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz   |
 
-Estas actas reflejan los eventos clave y decisiones tomadas durante las reuniones del proyecto, validadas y autorizadas por los responsables.
+Esta acta refleja los eventos clave y decisiones tomadas durante la reunión del proyecto, validada y autorizada por los responsables.

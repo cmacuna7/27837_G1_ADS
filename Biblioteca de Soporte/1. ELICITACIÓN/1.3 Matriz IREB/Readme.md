@@ -38,10 +38,9 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 # Historial de Versiones de la Matriz IREB
 
 | Versión                   | Fecha      | Responsable       | Aprobado por                         |
-| ------------------------- | ---------- | ----------------- | ----------------------------------- |
-| `Matriz_IREB_V1.0.0.csv`  | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz   |
-| `Matriz_IREB_V1.0.1.xlsx` | 18/06/2025 | Abner Arboleda    | Christian Bonifaz                    |
+| ------------------------- | ---------- | ----------------- | ------------------------------------|
 | `Matriz_IREB_V1.0.3.xlsx` | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda      |
-| `Matriz_IREB_V1.0.4.xlsx` | 05/08/2025 | Abner Arboleda    | Marcelo Acuña                        |
 
-Estas versiones reflejan la evolución del análisis de requisitos conforme al enfoque propuesto por el estándar IREB. Cada versión representa una validación formal en la línea base de requisitos.
+Esta versión refleja el análisis de requisitos conforme al enfoque propuesto por el estándar IREB. Representa una validación formal en la línea base de requisitos.
+
+**Documentación complementaria:** `Matriz_IREB_Informe.docx` - Informe detallado del análisis IREB

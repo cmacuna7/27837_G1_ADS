@@ -1,5 +1,7 @@
-# 📌 Versiones y Variantes
+# Diagrama de Clases del Sistema (DC)
 
-| **Código del ECS** | **Descripción del ECS**                                         | **Versión/Variante** | **Fecha de creación** | **Autor(es)**                                         | **Localización**                              | **Observaciones**                                                                 | **Variante de requisitos de usuario** | **Variante de plataforma**          |
-|--------------------|------------------------------------------------------------------|-----------------------|------------------------|-------------------------------------------------------|-----------------------------------------------|-----------------------------------------------------------------------------------|---------------------------------------|-------------------------------------|
-| DC                 | Diagramas UML de clases del sistema                              | V1.0.0                | 28/07/2025             | Marcelo Acuña, Abner Arboleda, Christian Bonifaz      | 27837_G1_ADS\MODELOS\2. DISEÑOS\1.4 Diagrama de clases | Diagramas de clases UML que representan la estructura del sistema Healthy+ | Español                               | Windows 11                          |
+| **Versión** | **Descripción** | **Autor** | **Aprobado por** |
+|-------------|-----------------|-----------|------------------|
+| `DC_V1.0.0.pdf` | Diagramas UML de clases que representan la estructura del sistema Healthy+ | Marcelo Acuña, Abner Arboleda, Christian Bonifaz | Marcelo Acuña |
+
+Especificación UML que documenta las clases del sistema, sus atributos, métodos y relaciones.

@@ -37,11 +37,8 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del Backlog
 
-| Versión            | Fecha       | Responsable       | Aprobado por                                   |
-|--------------------|-------------|-------------------|------------------------------------------------|
-| `BL_V1.0.0.xlsx`   | 12/06/2025  | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz             |
-| `BL_V1.0.1.csv`    | 18/06/2025  | Abner Arboleda    | Christian Bonifaz                              |
-| `BL_V1.0.2.csv`    | 02/07/2025  | Christian Bonifaz | Marcelo Acuña y Abner Arboleda                 |
-| `BL_V1.0.3.xlsx`   | 05/08/2025  | Abner Arboleda    | Marcelo Acuña                                  |
+| Versión            | Fecha       | Responsable       | Aprobado por                         |
+|--------------------|-------------|-------------------|--------------------------------------|
+| `BL_V1.0.3.xlsx`   | 05/08/2025  | Abner Arboleda    | Marcelo Acuña                        |
 
-Estas versiones reflejan la evolución continua del backlog, validado y aprobado para el seguimiento del proyecto.
+Esta versión refleja la última actualización del backlog del proyecto, validada y aprobada para el seguimiento.

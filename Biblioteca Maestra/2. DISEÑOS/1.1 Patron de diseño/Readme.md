@@ -1,5 +1,7 @@
-# 📌 Versiones y Variantes
+# Patrón de Diseño MVC (PAT)
 
-| **Código del ECS** | **Descripción del ECS**                                         | **Versión/Variante** | **Fecha de creación** | **Autor(es)**                                         | **Localización**                              | **Observaciones**                                                                 | **Variante de requisitos de usuario** | **Variante de plataforma**          |
-|--------------------|------------------------------------------------------------------|-----------------------|------------------------|-------------------------------------------------------|-----------------------------------------------|-----------------------------------------------------------------------------------|---------------------------------------|-------------------------------------|
-| PAT                | Implementación del patrón de diseño Modelo Vista Controlador     | V1.0.0                | 28/07/2025             | Marcelo Acuña, Abner Arboleda, Christian Bonifaz      | 27837_G1_ADS\MODELOS\2. DISEÑOS\1.1 Patron de diseño | Creación del patrón de diseño usando el MVC para el desarrollo de la aplicación para Healthy+ | Español                               | Windows 11                          |
+| **Versión** | **Descripción** | **Autor** | **Aprobado por** |
+|-------------|-----------------|-----------|------------------|
+| `PAT_V1.0.0.pdf` | Implementación del patrón de diseño Modelo Vista Controlador para el desarrollo de Healthy+ | Marcelo Acuña, Abner Arboleda, Christian Bonifaz | Marcelo Acuña |
+
+Especificación del patrón de diseño usando el MVC para la arquitectura de la aplicación.

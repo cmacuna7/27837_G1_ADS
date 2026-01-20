@@ -39,10 +39,6 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 | Versión               | Fecha       | Responsable       | Aprobado por                         |
 |----------------------|-------------|-------------------|--------------------------------------|
-| `Cronograma_V1.0.0.pdf` | 12/06/2025  | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz   |
-| `Cronograma_V1.0.1.pdf` | 20/06/2025  | Abner Arboleda    | Marcelo Acuña                        |
-| `Cronograma_V1.0.2.pdf` | 05/07/2025  | Christian Bonifaz | Abner Arboleda                       |
+| `Cronograma_V1.0.0.xlsx` | 12/06/2025  | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz   |
 
-Estas versiones reflejan la evolución del cronograma conforme al avance del proyecto. Cada versión ha sido validada y aprobada como parte de la gestión del proyecto.
- 
-1.4HIstorias de Usuario content loaded
+Esta versión refleja el cronograma del proyecto conforme al avance. Ha sido validada y aprobada como parte de la gestión del proyecto.

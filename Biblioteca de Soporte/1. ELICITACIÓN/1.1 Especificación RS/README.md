@@ -40,7 +40,6 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 | Versión           | Fecha       | Responsable       | Aprobado por                         |
 |------------------|-------------|-------------------|--------------------------------------|
 | `SRS_V1.0.0.pdf` | 12/06/2025  | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz   |
-| `SRS_V1.0.1.pdf` | 18/06/2025  | Abner Arboleda    | Christian Bonifaz                    |
 | `SRS_V1.0.2.pdf` | 02/07/2025  | Christian Bonifaz | Marcelo Acuña y Abner Arboleda      |
 
 Estas versiones reflejan la evolución del documento conforme al proceso de análisis y validación de requisitos. Cada versión corresponde a una revisión validada en la línea base.
