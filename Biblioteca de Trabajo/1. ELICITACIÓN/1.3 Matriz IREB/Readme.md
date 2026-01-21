@@ -41,6 +41,8 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 | --------------------------------- | ---------- | ----------------- | --------------------------------- |
 | `Matriz_IREB_V1.0.0.xlsx`         | 02/07/2025 | Abner Arboleda    | Marcelo Acuña y Christian Bonifaz |
 | `Matriz_IREB_V1.0.1.xlsx`         | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda    |
+| `Matriz_IREB_V1.0.2.xlsx`         | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda    |
 | `Matriz_IREB_Informe_V1.0.0.docx` | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda    |
+
 
 Matriz de trazabilidad de requisitos con documentación complementaria que valida formalmente la especificación en la línea base de requisitos.
