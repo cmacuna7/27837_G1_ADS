@@ -25,16 +25,16 @@ class NotificadorVisual extends Observador {
     console.log('    [OBSERVER - NotificadorVisual] Actualización recibida');
     if (data.tipo === 'ALERTA_MEDICAMENTO') {
       console.log(
-        '    👁️ [OBSERVER - NotificadorVisual] Tipo correcto: ALERTA_MEDICAMENTO'
+        '    👁️ [OBSERVER - NotificadorVisual] Tipo correcto: ALERTA_MEDICAMENTO',
       );
       console.log(
-        '    🎬 [OBSERVER - NotificadorVisual] ACCIÓN: Mostrando alerta visual'
+        '    🎬 [OBSERVER - NotificadorVisual] ACCIÓN: Mostrando alerta visual',
       );
       this.mostrarAlertaVisual(data.medicamento, data.horario);
     } else {
       console.log(
         '    ⚠️ [OBSERVER - NotificadorVisual] Tipo no reconocido:',
-        data.tipo
+        data.tipo,
       );
     }
   }
@@ -43,6 +43,12 @@ class NotificadorVisual extends Observador {
    * Muestra la pantalla de alerta
    */
   mostrarAlertaVisual(medicamento, horario) {
+    // Validar que medicamento existe
+    if (!medicamento) {
+      console.warn('No se puede mostrar alerta: medicamento no definido');
+      return;
+    }
+
     // Actualizar contenido de la alerta
     const alertaSubtitle = document.querySelector('.alert-subtitle');
     if (alertaSubtitle) {
@@ -50,7 +56,7 @@ class NotificadorVisual extends Observador {
     }
 
     // Guardar ID de la toma actual para acciones posteriores
-    window.tomaActual = horario.id;
+    window.tomaActual = horario?.id;
     window.medicamentoActual = medicamento;
 
     // Mostrar pantalla de alerta
@@ -97,8 +103,9 @@ class NotificadorVisual extends Observador {
    */
   reproducirSonido() {
     try {
-      const audioContext = new (window.AudioContext ||
-        window.webkitAudioContext)();
+      const audioContext = new (
+        window.AudioContext || window.webkitAudioContext
+      )();
       const oscillator = audioContext.createOscillator();
       const gainNode = audioContext.createGain();
 
@@ -111,7 +118,7 @@ class NotificadorVisual extends Observador {
       gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
       gainNode.gain.exponentialRampToValueAtTime(
         0.01,
-        audioContext.currentTime + 0.5
+        audioContext.currentTime + 0.5,
       );
 
       oscillator.start(audioContext.currentTime);

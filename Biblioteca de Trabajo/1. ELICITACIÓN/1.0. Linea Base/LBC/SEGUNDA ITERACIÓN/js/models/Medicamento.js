@@ -11,16 +11,30 @@ class Medicamento {
     this.id = data.id || Date.now() + Math.random();
     this.nombre = data.nombre || '';
     this.presentacion = data.presentacion || 'pastilla'; // pastilla, jarabe, inyección
-    this.dosis = data.dosis || 0;
+    this.dosis = data.dosis !== undefined ? data.dosis : 0;
     this.unidadDosis = data.unidadDosis || 'mg';
-    this.frecuencia = data.frecuencia || 8; // horas entre tomas
+    this.frecuencia = data.frecuencia !== undefined ? data.frecuencia : 8; // horas entre tomas
     this.horarioPrimeraToma = data.horarioPrimeraToma || '08:00';
-    this.duracion = data.duracion || 7; // días
+    this.duracion = data.duracion !== undefined ? data.duracion : 7; // días
     this.notas = data.notas || '';
     this.icono = data.icono || '💊';
     this.activo = data.activo !== undefined ? data.activo : true;
     this.fechaInicio = data.fechaInicio || new Date().toISOString();
     this.horariosGenerados = data.horariosGenerados || [];
+  }
+
+  /**
+   * Getter para compatibilidad con tests
+   */
+  get horarios() {
+    return this.horariosGenerados;
+  }
+
+  /**
+   * Setter para compatibilidad con tests
+   */
+  set horarios(value) {
+    this.horariosGenerados = value;
   }
 
   /**
@@ -38,7 +52,11 @@ class Medicamento {
       errores.push('La dosis debe ser mayor a 0');
     }
 
-    if (!this.frecuencia || this.frecuencia <= 0) {
+    if (
+      this.frecuencia === undefined ||
+      this.frecuencia === null ||
+      this.frecuencia <= 0
+    ) {
       errores.push('La frecuencia debe ser mayor a 0');
     }
 
@@ -47,11 +65,15 @@ class Medicamento {
       !this.validarHorario(this.horarioPrimeraToma)
     ) {
       errores.push(
-        'El horario de primera toma debe ser válido (formato HH:MM)'
+        'El horario de primera toma debe ser válido (formato HH:MM)',
       );
     }
 
-    if (!this.duracion || this.duracion <= 0) {
+    if (
+      this.duracion === undefined ||
+      this.duracion === null ||
+      this.duracion <= 0
+    ) {
       errores.push('La duración debe ser mayor a 0');
     }
 
@@ -86,7 +108,7 @@ class Medicamento {
       horarios.push({
         id: `${this.id}-toma-${i}`,
         medicamentoId: this.id,
-        fechaHora: new Date(fechaActual),
+        fechaHora: fechaActual.toISOString(),
         tomada: false,
         pospuesta: false,
         omitida: false,
@@ -94,7 +116,7 @@ class Medicamento {
       });
 
       fechaActual = new Date(
-        fechaActual.getTime() + this.frecuencia * 60 * 60 * 1000
+        fechaActual.getTime() + this.frecuencia * 60 * 60 * 1000,
       );
     }
 
@@ -108,12 +130,12 @@ class Medicamento {
   obtenerProximaToma() {
     const ahora = new Date();
     const proximasTomas = this.horariosGenerados.filter(
-      (h) => new Date(h.fechaHora) > ahora && !h.tomada && !h.omitida
+      (h) => new Date(h.fechaHora) > ahora && !h.tomada && !h.omitida,
     );
 
     if (proximasTomas.length > 0) {
       proximasTomas.sort(
-        (a, b) => new Date(a.fechaHora) - new Date(b.fechaHora)
+        (a, b) => new Date(a.fechaHora) - new Date(b.fechaHora),
       );
       return proximasTomas[0];
     }

@@ -1,0 +1,29 @@
+{
+  "name": "healthy-plus-tests",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de medicamentos - Pruebas unitarias",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "test:verbose": "node --experimental-vm-modules node_modules/jest/bin/jest.js --verbose"
+  },
+  "keywords": [
+    "testing",
+    "jest",
+    "medicamentos",
+    "healthy-plus"
+  ],
+  "author": "Equipo Healthy+",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "@testing-library/dom": "^9.3.0",
+    "@testing-library/jest-dom": "^6.1.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}

@@ -13,12 +13,13 @@ class EventoToma {
     this.horarioId = data.horarioId || null;
     this.nombreMedicamento = data.nombreMedicamento || '';
     this.tipo = data.tipo || 'tomado'; // 'tomado', 'omitido', 'pospuesto'
-    this.fecha = data.fecha || new Date().toISOString();
+    this.fecha =
+      data.fecha !== undefined ? data.fecha : new Date().toISOString();
     this.horaProgamada = data.horaProgamada || null;
     this.horaReal = data.horaReal || new Date().toISOString();
     this.motivo = data.motivo || ''; // Motivo de omisión o postergación
     this.notas = data.notas || '';
-    this.dosis = data.dosis || 0;
+    this.dosis = data.dosis !== undefined ? data.dosis : 0;
     this.unidadDosis = data.unidadDosis || 'mg';
   }
 
@@ -36,7 +37,7 @@ class EventoToma {
       errores.push('El tipo de evento debe ser: tomado, omitido o pospuesto');
     }
 
-    if (!this.fecha) {
+    if (!this.fecha || this.fecha === null || this.fecha === '') {
       errores.push('La fecha del evento es obligatoria');
     }
 

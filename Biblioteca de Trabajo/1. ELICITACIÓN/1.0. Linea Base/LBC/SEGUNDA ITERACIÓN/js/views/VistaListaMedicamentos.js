@@ -5,9 +5,14 @@
  */
 class VistaListaMedicamentos {
   constructor(contenedorId = 'medicine-list') {
-    this.contenedor =
-      document.querySelector(`.${contenedorId}`) ||
-      document.querySelector(`#${contenedorId}`);
+    // Aceptar tanto un ID string como un elemento DOM
+    if (typeof contenedorId === 'string') {
+      this.contenedor =
+        document.querySelector(`#${contenedorId}`) ||
+        document.querySelector(`.${contenedorId}`);
+    } else {
+      this.contenedor = contenedorId;
+    }
     this.callbacks = {
       onEditar: null,
       onEliminar: null,
@@ -74,8 +79,8 @@ class VistaListaMedicamentos {
       medicamento.presentacion === 'jarabe'
         ? 'medicine-icon-liquid'
         : medicamento.presentacion === 'inyección'
-        ? 'medicine-icon-injection'
-        : '';
+          ? 'medicine-icon-injection'
+          : '';
 
     let viewBox = '0 0 64 64'; // Por defecto pastilla
     if (medicamento.presentacion === 'jarabe') {
@@ -92,11 +97,11 @@ class VistaListaMedicamentos {
             </div>
             <div class="medicine-info">
                 <h3 class="medicine-name">${this.escaparHTML(
-                  medicamento.nombre
+                  medicamento.nombre,
                 )}</h3>
                 <p class="medicine-dose">${medicamento.dosis}${
-      medicamento.unidadDosis
-    } • ${medicamento.presentacion}</p>
+                  medicamento.unidadDosis
+                } • ${medicamento.presentacion}</p>
                 <p class="medicine-time">${textoProximaToma}</p>
             </div>
             <div class="medicine-actions">

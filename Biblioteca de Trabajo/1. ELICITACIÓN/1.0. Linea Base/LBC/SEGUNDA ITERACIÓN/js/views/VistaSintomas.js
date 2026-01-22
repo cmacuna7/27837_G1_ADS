@@ -6,7 +6,14 @@
  */
 class VistaSintomas {
   constructor(containerId) {
-    this.container = document.querySelector(`.${containerId}`);
+    // Aceptar tanto un ID string como un elemento DOM
+    if (typeof containerId === 'string') {
+      this.container =
+        document.querySelector(`#${containerId}`) ||
+        document.querySelector(`.${containerId}`);
+    } else {
+      this.container = containerId;
+    }
   }
 
   /**
@@ -34,7 +41,7 @@ class VistaSintomas {
       const grupo = this.crearGrupoMedicamento(
         medicamentoId,
         sintomasPorMedicamento[medicamentoId],
-        medicamentos
+        medicamentos,
       );
       this.container.appendChild(grupo);
     });
@@ -153,7 +160,7 @@ class VistaSintomas {
         <div class="symptom-item-meta">
           <span class="symptom-item-date">${fecha} ${hora}</span>
           <span class="symptom-item-category">${this.obtenerNombreCategoria(
-            sintoma.categoria
+            sintoma.categoria,
           )}</span>
           <span class="symptom-item-intensity" style="background-color: ${
             intensidadColors[sintoma.intensidad]

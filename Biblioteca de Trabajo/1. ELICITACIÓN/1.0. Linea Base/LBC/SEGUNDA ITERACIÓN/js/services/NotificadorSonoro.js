@@ -20,24 +20,24 @@ class NotificadorSonoro extends Observador {
     console.log('    [OBSERVER - NotificadorSonoro] Actualización recibida');
     console.log(
       '    🔊 [OBSERVER - NotificadorSonoro] Audio habilitado:',
-      this.audioHabilitado
+      this.audioHabilitado,
     );
     if (data.tipo === 'ALERTA_MEDICAMENTO' && this.audioHabilitado) {
       console.log(
-        '    🔔 [OBSERVER - NotificadorSonoro] Tipo correcto: ALERTA_MEDICAMENTO'
+        '    🔔 [OBSERVER - NotificadorSonoro] Tipo correcto: ALERTA_MEDICAMENTO',
       );
       console.log(
-        '    🎬 [OBSERVER - NotificadorSonoro] ACCIÓN: Iniciando alarma continua'
+        '    🎬 [OBSERVER - NotificadorSonoro] ACCIÓN: Iniciando alarma continua',
       );
       this.iniciarAlarma();
     } else if (data.tipo !== 'ALERTA_MEDICAMENTO') {
       console.log(
         '    ⚠️ [OBSERVER - NotificadorSonoro] Tipo no reconocido:',
-        data.tipo
+        data.tipo,
       );
     } else {
       console.log(
-        '    🔇 [OBSERVER - NotificadorSonoro] Audio deshabilitado, no se reproduce'
+        '    🔇 [OBSERVER - NotificadorSonoro] Audio deshabilitado, no se reproduce',
       );
     }
   }
@@ -62,7 +62,7 @@ class NotificadorSonoro extends Observador {
     }, 3000); // Repetir cada 3 segundos
 
     console.log(
-      '    ⏰ [ALARMA] Alarma continua configurada (intervalo: 3000ms)'
+      '    ⏰ [ALARMA] Alarma continua configurada (intervalo: 3000ms)',
     );
   }
 
@@ -81,9 +81,14 @@ class NotificadorSonoro extends Observador {
 
     // Cerrar contexto de audio si existe
     if (this.audioContext) {
-      this.audioContext.close();
-      this.audioContext = null;
-      console.log('    [ALARMA] Contexto de audio cerrado');
+      try {
+        this.audioContext.close();
+        this.audioContext = null;
+        console.log('    [ALARMA] Contexto de audio cerrado');
+      } catch (error) {
+        console.error('    [ALARMA] Error al cerrar contexto:', error);
+        this.audioContext = null;
+      }
     }
   }
 
@@ -92,8 +97,12 @@ class NotificadorSonoro extends Observador {
    */
   reproducirAlerta() {
     try {
-      this.audioContext = new (window.AudioContext ||
-        window.webkitAudioContext)();
+      // Reutilizar audioContext si existe, sino crear uno nuevo
+      if (!this.audioContext) {
+        this.audioContext = new (
+          window.AudioContext || window.webkitAudioContext
+        )();
+      }
 
       // Secuencia de 3 beeps
       const frecuencias = [880, 880, 880]; // Frecuencia en Hz
