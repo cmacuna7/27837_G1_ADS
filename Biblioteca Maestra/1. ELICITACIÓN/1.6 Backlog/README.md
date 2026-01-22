@@ -39,6 +39,6 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 | Versión            | Fecha       | Responsable       | Aprobado por                         |
 |--------------------|-------------|-------------------|--------------------------------------|
-| `BL_V1.0.3.xlsx`   | 05/08/2025  | Abner Arboleda    | Marcelo Acuña                        |
+| `BL_V2.0.0.xlsx`   | 21/08/2025  | Christian Bonifaz | Marcelo Acuña                        |
 
 Esta versión refleja la última actualización del backlog del proyecto, validada y aprobada para el seguimiento.

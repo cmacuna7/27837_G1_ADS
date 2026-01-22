@@ -43,5 +43,6 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 | `BL_V1.0.1.xlsx`   | 18/06/2025  | Abner Arboleda    | Christian Bonifaz                    |
 | `BL_V1.0.2.xlsx`   | 02/07/2025  | Christian Bonifaz | Marcelo Acuña y Abner Arboleda       |
 | `BL_V1.0.3.xlsx`   | 05/08/2025  | Abner Arboleda    | Marcelo Acuña                        |
+| `BL_V2.0.0.xlsx`   | 21/08/2025  | Christian Bonifaz | Marcelo Acuña                        |
 
 Estas versiones reflejan la evolución continua del backlog, validado y aprobado para el seguimiento del proyecto.
