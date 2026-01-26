@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Healthy+ - Mis Medicinas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!-- Pantalla 1: Listado de Medicamentos -->
+    <div id="screen-list" class="screen active">
+      <header class="header">
+        <h1 class="header-title">Mis Medicinas</h1>
+        <div class="header-actions">
+          <button class="btn-icon" id="btn-view-history" title="Ver historial">
+            <i class="bi bi-calendar-check"></i>
+          </button>
+          <button class="btn-icon" id="btn-view-symptoms" title="Ver síntomas">
+            <i class="bi bi-clipboard2-pulse"></i>
+          </button>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <!-- Filtro por paciente -->
+        <div class="history-filters" style="margin-bottom: 15px">
+          <select id="filter-paciente-list" class="filter-select">
+            <option value="">Todos los pacientes</option>
+          </select>
+        </div>
+
+        <div class="medicine-list">
+          <!-- Los medicamentos se cargarán dinámicamente desde IndexedDB -->
+        </div>
+      </main>
+
+      <!-- Botón Flotante para Agregar -->
+      <button class="fab" aria-label="Agregar nueva medicina">
+        <svg
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+        >
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Pantalla 2: Registro de Medicamento -->
+    <div id="screen-form" class="screen">
+      <header class="header">
+        <button class="btn-text">Cancelar</button>
+        <h1 class="header-title">Nueva Medicina</h1>
+        <div style="width: 70px"></div>
+      </header>
+
+      <main class="main-content">
+        <form class="medicine-form">
+          <!-- Nombre del Paciente -->
+          <div class="form-group">
+            <label for="patient-name-input" class="form-label"
+              >Nombre del paciente</label
+            >
+            <input
+              type="text"
+              id="patient-name-input"
+              class="form-input"
+              placeholder="Ej. Juan Pérez"
+            />
+          </div>
+          <!-- Nombre del Medicamento -->
+          <div class="form-group">
+            <label for="medicine-name-input" class="form-label"
+              >¿Cómo se llama?</label
+            >
+            <input
+              type="text"
+              id="medicine-name-input"
+              class="form-input"
+              placeholder="Ej. Aspirina"
+            />
+          </div>
+
+          <!-- Presentación -->
+          <div class="form-group">
+            <label class="form-label">Presentación</label>
+            <div class="frequency-selector">
+              <button
+                type="button"
+                class="presentation-btn active"
+                data-presentation="pastilla"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 64 64"
+                  fill="currentColor"
+                  stroke="none"
+                >
+                  <path
+                    d="M48.973,43.316L58.297,34l-0.02-0.02C61.809,30.375,64,25.445,64,20C64,8.953,55.047,0,44,0c-5.449,0-10.375,2.191-13.98,5.723L30,5.703l-9.316,9.324L48.973,43.316z"
+                  />
+                  <path
+                    d="M15.027,20.684L5.879,29.84C2.25,33.461,0,38.465,0,44c0,11.047,8.953,20,20,20c5.535,0,10.539-2.25,14.16-5.879l9.156-9.148L15.027,20.684z"
+                  />
+                </svg>
+                Pastilla
+              </button>
+              <button
+                type="button"
+                class="presentation-btn"
+                data-presentation="jarabe"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 512 512"
+                  fill="currentColor"
+                  stroke="none"
+                >
+                  <path
+                    d="M354.076,133.07c-10.346,0-18.762-8.417-18.762-18.762V99.459c10.398-0.537,18.67-9.113,18.67-19.643v-60.12C353.984,8.818,345.165,0,334.288,0H177.712c-10.877,0-19.696,8.818-19.696,19.696v60.12c0,10.532,8.272,19.108,18.67,19.643v14.848c0,10.346-8.417,18.762-18.762,18.762c-36.485,0-66.166,29.683-66.166,66.166c0,15.381,0,284.063,0,293.068c0,10.877,8.818,19.696,19.696,19.696h289.09c10.877,0,19.696-8.818,19.696-19.696c0-8.879,0-278.183,0-293.068C420.242,162.752,390.559,133.07,354.076,133.07z M314.592,39.392V60.12H197.408V39.392H314.592z M380.85,472.608H131.151V258.542H380.85V472.608z M380.851,219.152h-249.7v-19.916c0-14.763,12.01-26.775,26.775-26.775c32.066,0,58.154-26.088,58.154-58.154V99.511h79.843v14.797c0,32.066,26.088,58.154,58.154,58.154c14.763,0,26.774,12.011,26.774,26.775V219.152z"
+                  />
+                  <path
+                    d="M206.794,385.27h29.511v29.511c0,10.877,8.818,19.696,19.696,19.696c10.877,0,19.696-8.818,19.696-19.696V385.27h29.511c10.877,0,19.696-8.818,19.696-19.696c0-10.877-8.818-19.696-19.696-19.696h-29.511v-29.51c0-10.877-8.818-19.696-19.696-19.696c-10.877,0-19.696,8.818-19.696,19.696v29.51h-29.511c-10.877,0-19.696,8.818-19.696,19.696C187.098,376.452,195.917,385.27,206.794,385.27z"
+                  />
+                </svg>
+                Jarabe
+              </button>
+              <button
+                type="button"
+                class="presentation-btn"
+                data-presentation="inyección"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 32 32"
+                  fill="currentColor"
+                  stroke="none"
+                >
+                  <path
+                    d="M22.043,8.549l-0.595,-0.595c-1.172,-1.172 -3.071,-1.172 -4.243,-0l-9.922,9.922l-1.574,-1.573c-0.391,-0.39 -1.024,-0.39 -1.414,0.001c-0.39,0.39 -0.39,1.024 0,1.414l4.289,4.285l-1.769,1.773l-1.49,-1.489c-0.39,-0.39 -1.024,-0.39 -1.414,0.001c-0.39,0.39 -0.39,1.024 0.001,1.414l4.368,4.366c0.391,0.39 1.025,0.39 1.415,-0.001c0.39,-0.39 0.39,-1.024 -0.001,-1.414l-1.464,-1.464l1.768,-1.772l4.295,4.291c0.391,0.39 1.024,0.39 1.414,-0c0.39,-0.391 0.39,-1.024 -0,-1.415l-1.35,-1.349l9.919,-9.919c1.172,-1.172 1.172,-3.071 0,-4.243l-0.819,-0.819l4.251,-4.256c0.39,-0.391 0.389,-1.025 -0.001,-1.415c-0.391,-0.39 -1.025,-0.389 -1.415,0.001l-4.249,4.256Zm-9.101,14.982l9.92,-9.92c0.391,-0.391 0.391,-1.024 0,-1.415c0,0 -2.828,-2.828 -2.828,-2.828c-0.391,-0.391 -1.024,-0.391 -1.414,-0l-0.858,0.857l1.108,1.108c0.39,0.39 0.39,1.024 -0,1.414c-0.39,0.391 -1.024,0.391 -1.414,0l-1.108,-1.107l-1.6,1.6l1.108,1.107c0.39,0.39 0.39,1.024 -0,1.414c-0.391,0.391 -1.024,0.391 -1.414,0l-1.108,-1.107l-1.572,1.571l1.108,1.108c0.39,0.39 0.39,1.024 -0,1.414c-0.39,0.391 -1.024,0.391 -1.414,0l-1.108,-1.107l-1.65,1.65l4.244,4.241Z"
+                  />
+                </svg>
+                Inyección
+              </button>
+            </div>
+          </div>
+
+          <!-- Dosis -->
+          <div class="form-group">
+            <label class="form-label">Dosis</label>
+            <div class="dose-selector">
+              <button type="button" class="dose-btn">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+              <div class="dose-display">
+                <input
+                  type="number"
+                  id="dose-value"
+                  class="dose-value dose-input"
+                  value="500"
+                  min="1"
+                  max="10000"
+                  step="1"
+                />
+                <span id="dose-unit" class="dose-unit">mg</span>
+              </div>
+              <button type="button" class="dose-btn">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Frecuencia -->
+          <div class="form-group">
+            <label class="form-label">Frecuencia</label>
+            <div class="frequency-selector">
+              <button type="button" class="frequency-btn active" data-hours="8">
+                Cada 8h
+              </button>
+              <button type="button" class="frequency-btn" data-hours="12">
+                Cada 12h
+              </button>
+              <button type="button" class="frequency-btn" data-hours="24">
+                Cada 24h
+              </button>
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+              <label for="custom-frequency" class="form-label"
+                >O especifica cada cuántas horas:</label
+              >
+              <input
+                type="number"
+                id="custom-frequency"
+                class="form-input"
+                placeholder="Ej. 6"
+                min="1"
+                max="24"
+                step="1"
+              />
+            </div>
+          </div>
+
+          <!-- Hora de Primera Toma -->
+          <div class="form-group">
+            <label for="time-input" class="form-label"
+              >Hora de la primera toma</label
+            >
+            <input
+              type="time"
+              id="time-input"
+              class="time-input"
+              value="08:00"
+            />
+          </div>
+
+          <!-- Duración del Tratamiento -->
+          <div class="form-group">
+            <label for="duration-input" class="form-label"
+              >Duración del tratamiento (días)</label
+            >
+            <input
+              type="number"
+              id="duration-input"
+              class="form-input"
+              placeholder="Ej. 7"
+              value="7"
+              min="1"
+              max="365"
+            />
+          </div>
+
+          <!-- Notas Adicionales -->
+          <div class="form-group">
+            <label for="notes-input" class="form-label"
+              >Notas adicionales (opcional)</label
+            >
+            <textarea
+              id="notes-input"
+              class="form-input"
+              placeholder="Ej. Tomar con alimentos, evitar alcohol..."
+              rows="3"
+            ></textarea>
+          </div>
+
+          <!-- Botón Guardar -->
+          <button type="submit" id="save-btn" class="btn-save" disabled>
+            GUARDAR TRATAMIENTO
+          </button>
+        </form>
+      </main>
+    </div>
+
+    <!-- Pantalla 3: Alerta de Recordatorio -->
+    <div id="screen-alert" class="screen screen-alert">
+      <div class="alert-container">
+        <div class="alert-icon">
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            class="bell-animation"
+          >
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+        </div>
+
+        <h2 class="alert-title">¡Hora de tu medicina!</h2>
+        <p class="alert-subtitle">Paracetamol 500mg</p>
+        <p class="alert-notes" id="alert-notes" style="display: none"></p>
+
+        <div class="alert-actions">
+          <button class="alert-btn alert-btn-taken">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            YA LA TOMÉ
+          </button>
+          <button class="alert-btn alert-btn-postpone">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            RECORDAR EN 10 MIN
+          </button>
+          <button class="alert-btn alert-btn-skip">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            OMITIR
+          </button>
+        </div>
+
+        <!-- Modal para motivo de omisión -->
+        <div
+          id="skip-reason-modal"
+          class="skip-reason-modal"
+          style="display: none"
+        >
+          <div class="skip-reason-content">
+            <h3>¿Por qué omitiste esta dosis?</h3>
+            <div class="skip-reasons">
+              <button class="reason-btn" data-reason="Olvidé tomarla">
+                Olvidé tomarla
+              </button>
+              <button class="reason-btn" data-reason="No tengo el medicamento">
+                No tengo el medicamento
+              </button>
+              <button class="reason-btn" data-reason="Efectos secundarios">
+                Efectos secundarios
+              </button>
+              <button class="reason-btn" data-reason="Ya me siento mejor">
+                Ya me siento mejor
+              </button>
+              <button class="reason-btn" data-reason="Otro motivo">
+                Otro motivo
+              </button>
+            </div>
+            <button class="btn-cancel-skip">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Confetti Overlay -->
+    <div id="confetti" class="confetti-overlay"></div>
+
+    <!-- Pantalla de Detalle del Medicamento -->
+    <div id="screen-detail" class="screen">
+      <header class="header">
+        <button class="btn-text btn-back-detail">← Atrás</button>
+        <h1 class="header-title">Detalle</h1>
+        <button class="btn-text btn-edit-detail">Editar</button>
+      </header>
+
+      <main class="main-content detail-content">
+        <div class="detail-header">
+          <div class="detail-icon" id="detail-icon">
+            <svg
+              class="medicine-svg-icon"
+              width="64"
+              height="64"
+              viewBox="0 0 64 64"
+              fill="currentColor"
+            >
+              <path
+                d="M48.973,43.316L58.297,34l-0.02-0.02C61.809,30.375,64,25.445,64,20C64,8.953,55.047,0,44,0c-5.449,0-10.375,2.191-13.98,5.723L30,5.703l-9.316,9.324L48.973,43.316z"
+              />
+              <path
+                d="M15.027,20.684L5.879,29.84C2.25,33.461,0,38.465,0,44c0,11.047,8.953,20,20,20c5.535,0,10.539-2.25,14.16-5.879l9.156-9.148L15.027,20.684z"
+              />
+            </svg>
+          </div>
+          <h2 class="detail-name" id="detail-name">Nombre del medicamento</h2>
+        </div>
+
+        <div class="detail-section">
+          <h3 class="detail-section-title">Información General</h3>
+          <div class="detail-info-grid">
+            <div class="detail-info-item">
+              <span class="detail-label">Presentación:</span>
+              <span class="detail-value" id="detail-presentacion"
+                >Pastilla</span
+              >
+            </div>
+            <div class="detail-info-item">
+              <span class="detail-label">Dosis:</span>
+              <span class="detail-value" id="detail-dosis">500 mg</span>
+            </div>
+            <div class="detail-info-item">
+              <span class="detail-label">Frecuencia:</span>
+              <span class="detail-value" id="detail-frecuencia"
+                >Cada 8 horas</span
+              >
+            </div>
+            <div class="detail-info-item">
+              <span class="detail-label">Hora primera toma:</span>
+              <span class="detail-value" id="detail-hora">08:00</span>
+            </div>
+            <div class="detail-info-item">
+              <span class="detail-label">Duración:</span>
+              <span class="detail-value" id="detail-duracion">7 días</span>
+            </div>
+            <div class="detail-info-item">
+              <span class="detail-label">Fecha inicio:</span>
+              <span class="detail-value" id="detail-fecha-inicio">--</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="detail-section"
+          id="detail-notas-section"
+          style="display: none"
+        >
+          <h3 class="detail-section-title">Notas</h3>
+          <p class="detail-notes" id="detail-notas"></p>
+        </div>
+
+        <div class="detail-section">
+          <h3 class="detail-section-title">Próximas Tomas</h3>
+          <div class="detail-schedule" id="detail-schedule">
+            <p class="empty-message">No hay próximas tomas programadas</p>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h3 class="detail-section-title">Historial de Tomas</h3>
+          <div class="detail-history" id="detail-history">
+            <p class="empty-message">No hay eventos registrados</p>
+          </div>
+        </div>
+
+        <div class="detail-section">
+          <h3 class="detail-section-title">Síntomas Reportados</h3>
+          <div class="detail-symptoms" id="detail-symptoms">
+            <p class="empty-message">No hay síntomas registrados</p>
+          </div>
+          <button class="btn-add-symptom-detail" id="btn-add-symptom-detail">
+            + Reportar síntoma
+          </button>
+        </div>
+
+        <div class="detail-actions">
+          <button class="btn-delete-medicine" id="btn-delete-detail">
+            Eliminar Medicamento
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <!-- Pantalla 4: Historial de Eventos (RF06) -->
+    <div id="screen-history" class="screen">
+      <header class="header">
+        <button class="btn-text btn-back-history">
+          <i class="bi bi-arrow-left"></i> Atrás
+        </button>
+        <h1 class="header-title">Historial</h1>
+        <button class="btn-text btn-export">
+          <i class="bi bi-download"></i> Exportar
+        </button>
+      </header>
+
+      <main class="main-content">
+        <!-- Filtros -->
+        <div class="history-filters">
+          <select id="filter-paciente-history" class="filter-select">
+            <option value="">Todos los pacientes</option>
+          </select>
+          <select id="filter-medicamento" class="filter-select">
+            <option value="">Todos los medicamentos</option>
+          </select>
+          <select id="filter-tipo" class="filter-select">
+            <option value="">Todos los tipos</option>
+            <option value="tomado">Tomado</option>
+            <option value="omitido">Omitido</option>
+            <option value="pospuesto">Pospuesto</option>
+          </select>
+        </div>
+
+        <!-- Estadísticas -->
+        <div class="history-stats">
+          <div class="stat-card">
+            <span class="stat-value" id="stat-total">0</span>
+            <span class="stat-label">Total</span>
+          </div>
+          <div class="stat-card stat-success">
+            <span class="stat-value" id="stat-tomadas">0</span>
+            <span class="stat-label">Tomadas</span>
+          </div>
+          <div class="stat-card stat-warning">
+            <span class="stat-value" id="stat-omitidas">0</span>
+            <span class="stat-label">Omitidas</span>
+          </div>
+        </div>
+
+        <!-- Lista de eventos -->
+        <div class="history-list">
+          <!-- Los eventos se cargarán dinámicamente -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Pantalla 5: Registro de Síntomas (RF07) -->
+    <div id="screen-symptoms" class="screen">
+      <header class="header">
+        <button class="btn-text btn-back-symptoms">
+          <i class="bi bi-arrow-left"></i> Atrás
+        </button>
+        <h1 class="header-title">Registrar Síntoma</h1>
+        <div style="width: 70px"></div>
+      </header>
+
+      <main class="main-content">
+        <form class="symptoms-form">
+          <!-- Seleccionar Medicamento -->
+          <div class="form-group">
+            <label for="symptom-medicine-select" class="form-label"
+              >Medicamento asociado</label
+            >
+            <select id="symptom-medicine-select" class="form-input" required>
+              <option value="">Selecciona un medicamento</option>
+            </select>
+          </div>
+
+          <!-- Categoría del Síntoma -->
+          <div class="form-group">
+            <label class="form-label">Categoría del síntoma</label>
+            <div class="category-selector">
+              <button
+                type="button"
+                class="category-btn active"
+                data-category="general"
+                data-icon="📋"
+              >
+                <i class="bi bi-clipboard-check"></i>
+                General
+              </button>
+              <button
+                type="button"
+                class="category-btn"
+                data-category="digestivo"
+                data-icon="🤢"
+              >
+                <i class="bi bi-emoji-dizzy"></i>
+                Digestivo
+              </button>
+              <button
+                type="button"
+                class="category-btn"
+                data-category="neurologico"
+                data-icon="🧠"
+              >
+                <i class="bi bi-brain"></i>
+                Neurológico
+              </button>
+              <button
+                type="button"
+                class="category-btn"
+                data-category="cutaneo"
+                data-icon="🩹"
+              >
+                <i class="bi bi-bandaid"></i>
+                Cutáneo
+              </button>
+              <button
+                type="button"
+                class="category-btn"
+                data-category="respiratorio"
+                data-icon="🫁"
+              >
+                <i class="bi bi-lungs"></i>
+                Respiratorio
+              </button>
+              <button
+                type="button"
+                class="category-btn"
+                data-category="cardiovascular"
+                data-icon="❤️"
+              >
+                <i class="bi bi-heart-pulse"></i>
+                Cardiovascular
+              </button>
+            </div>
+          </div>
+
+          <!-- Descripción del Síntoma -->
+          <div class="form-group">
+            <label for="symptom-description" class="form-label"
+              >Descripción del síntoma</label
+            >
+            <textarea
+              id="symptom-description"
+              class="form-input"
+              placeholder="Describe el síntoma..."
+              rows="3"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Intensidad -->
+          <div class="form-group">
+            <label class="form-label">Intensidad</label>
+            <div class="intensity-selector">
+              <button
+                type="button"
+                class="intensity-btn active"
+                data-intensity="leve"
+              >
+                Leve
+              </button>
+              <button
+                type="button"
+                class="intensity-btn"
+                data-intensity="moderada"
+              >
+                Moderada
+              </button>
+              <button
+                type="button"
+                class="intensity-btn"
+                data-intensity="severa"
+              >
+                Severa
+              </button>
+            </div>
+          </div>
+
+          <!-- Notas Adicionales -->
+          <div class="form-group">
+            <label for="symptom-notes" class="form-label"
+              >Notas adicionales (opcional)</label
+            >
+            <textarea
+              id="symptom-notes"
+              class="form-input"
+              placeholder="Información adicional..."
+              rows="2"
+            ></textarea>
+          </div>
+
+          <!-- Botón Guardar -->
+          <button type="submit" class="btn-save">GUARDAR SÍNTOMA</button>
+        </form>
+      </main>
+    </div>
+
+    <!-- Pantalla 6: Ver Síntomas (RF07) -->
+    <div id="screen-symptoms-list" class="screen">
+      <header class="header">
+        <button class="btn-text btn-back-symptoms-list">
+          <i class="bi bi-arrow-left"></i> Atrás
+        </button>
+        <h1 class="header-title">Síntomas</h1>
+        <button class="btn-text btn-add-symptom">
+          <i class="bi bi-plus-lg"></i> Agregar
+        </button>
+      </header>
+
+      <main class="main-content">
+        <!-- Filtro por paciente -->
+        <div class="history-filters" style="margin-bottom: 15px">
+          <select id="filter-paciente-symptoms" class="filter-select">
+            <option value="">Todos los pacientes</option>
+          </select>
+        </div>
+        <!-- Filtro por medicamento -->
+        <div class="symptoms-filters">
+          <select id="symptom-filter-medicamento" class="filter-select">
+            <option value="">Todos los medicamentos</option>
+          </select>
+          <select id="symptom-filter-intensidad" class="filter-select">
+            <option value="">Todas las intensidades</option>
+            <option value="leve">Leve</option>
+            <option value="moderada">Moderada</option>
+            <option value="severa">Severa</option>
+          </select>
+        </div>
+
+        <!-- Lista de síntomas -->
+        <div class="symptoms-list">
+          <!-- Los síntomas se cargarán dinámicamente -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Script Principal con módulos ES6 -->
+    <script type="module" src="js/app.js"></script>
+
+    <!-- Bibliotecas para exportación (RF06-3 y RF06-4) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </body>
+</html>
