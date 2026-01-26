@@ -89,6 +89,18 @@ class VistaListaMedicamentos {
       viewBox = '0 0 32 32';
     }
 
+    // Preparar texto de notas
+    const textoNotas =
+      medicamento.notas && medicamento.notas.trim()
+        ? `<p class="medicine-notes"><em>Notas: ${this.escaparHTML(medicamento.notas)}</em></p>`
+        : '';
+
+    // Preparar nombre del paciente
+    const nombrePaciente =
+      medicamento.nombrePaciente && medicamento.nombrePaciente.trim()
+        ? `<p class="medicine-patient">Paciente: <strong>${this.escaparHTML(medicamento.nombrePaciente)}</strong></p>`
+        : '';
+
     tarjeta.innerHTML = `
             <div class="medicine-icon ${iconoClass}">
                 <svg class="medicine-svg-icon" width="48" height="48" viewBox="${viewBox}" fill="currentColor">
@@ -99,10 +111,12 @@ class VistaListaMedicamentos {
                 <h3 class="medicine-name">${this.escaparHTML(
                   medicamento.nombre,
                 )}</h3>
+                ${nombrePaciente}
                 <p class="medicine-dose">${medicamento.dosis}${
                   medicamento.unidadDosis
                 } • ${medicamento.presentacion}</p>
                 <p class="medicine-time">${textoProximaToma}</p>
+                ${textoNotas}
             </div>
             <div class="medicine-actions">
                 <!-- Botón Editar -->

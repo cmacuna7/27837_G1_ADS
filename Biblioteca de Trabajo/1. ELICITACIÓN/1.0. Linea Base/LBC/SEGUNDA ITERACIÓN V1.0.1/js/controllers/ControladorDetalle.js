@@ -43,7 +43,7 @@ class ControladorDetalle {
   async cargarDatosCompletos() {
     // Recargar medicamento actualizado
     this.medicamentoActual = await this.gestor.obtenerMedicamentoPorId(
-      this.medicamentoActual.id
+      this.medicamentoActual.id,
     );
   }
 
@@ -81,6 +81,17 @@ class ControladorDetalle {
     // Nombre
     document.getElementById('detail-name').textContent = med.nombre;
 
+    // Nombre del paciente
+    const pacienteElement = document.getElementById('detail-paciente');
+    if (pacienteElement) {
+      if (med.nombrePaciente && med.nombrePaciente.trim()) {
+        pacienteElement.textContent = med.nombrePaciente;
+        pacienteElement.parentElement.style.display = 'flex';
+      } else {
+        pacienteElement.parentElement.style.display = 'none';
+      }
+    }
+
     // Información
     const presentacionLabels = {
       pastilla: 'Pastilla',
@@ -90,19 +101,16 @@ class ControladorDetalle {
     document.getElementById('detail-presentacion').textContent =
       presentacionLabels[med.presentacion] || med.presentacion;
 
-    document.getElementById(
-      'detail-dosis'
-    ).textContent = `${med.dosis} ${med.unidadDosis}`;
+    document.getElementById('detail-dosis').textContent =
+      `${med.dosis} ${med.unidadDosis}`;
 
-    document.getElementById(
-      'detail-frecuencia'
-    ).textContent = `Cada ${med.frecuencia} horas`;
+    document.getElementById('detail-frecuencia').textContent =
+      `Cada ${med.frecuencia} horas`;
 
     document.getElementById('detail-hora').textContent = med.horarioPrimeraToma;
 
-    document.getElementById(
-      'detail-duracion'
-    ).textContent = `${med.duracion} días`;
+    document.getElementById('detail-duracion').textContent =
+      `${med.duracion} días`;
 
     const fecha = new Date(med.fechaInicio);
     document.getElementById('detail-fecha-inicio').textContent =
@@ -184,7 +192,7 @@ class ControladorDetalle {
 
     try {
       const eventos = await this.gestor.obtenerEventosPorMedicamento(
-        this.medicamentoActual.id
+        this.medicamentoActual.id,
       );
 
       if (eventos.length === 0) {
@@ -260,7 +268,7 @@ class ControladorDetalle {
 
     try {
       const sintomas = await this.gestor.obtenerSintomasPorMedicamento(
-        this.medicamentoActual.id
+        this.medicamentoActual.id,
       );
 
       if (sintomas.length === 0) {
