@@ -37,8 +37,9 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del Cronograma
 
-| Versión            | Fecha      | Responsable   | Aprobado por                       |
-| ------------------ | ---------- | ------------- | ---------------------------------- |
-| `CRON_V1.0.0.xlsx` | 12/06/2025 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
+| Versión            | Fecha      | Responsable       | Aprobado por                       |
+| ------------------ | ---------- | ----------------- | ---------------------------------- |
+| `CRON_V1.0.0.xlsx` | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
+| `CRON_V2.0.0.xlsx` | 01/02/2026 | Christian Bonifaz | Abner Arboleda                     |
 
-Esta versión refleja el cronograma del proyecto conforme al avance. Ha sido validada y aprobada como parte de la gestión del proyecto.
+Estas versiones reflejan la evolución del cronograma del proyecto conforme al avance y cambios en el plan de desarrollo. Cada versión ha sido validada y aprobada como parte de la gestión del proyecto.
