@@ -88,10 +88,11 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 ## Historial de Versiones del Código
 
-| Iteración         | Fecha      | Responsable    | Aprobado por                       | Descripción                              |
-| ----------------- | ---------- | -------------- | ---------------------------------- | ---------------------------------------- |
-| Primera Iteración | 28/07/2025 | Marcelo Acuña  | Abner Arboleda y Christian Bonifaz | Implementación base del sistema Healthy+ |
-| Segunda Iteración | 15/12/2025 | Abner Arboleda | Christian Bonifaz                  | Expansión de funcionalidades y mejoras   |
+| Iteración                | Fecha      | Responsable    | Aprobado por                       | Descripción                              |
+| ------------------------ | ---------- | -------------- | ---------------------------------- | ---------------------------------------- |
+| Primera Iteración V1.0.0 | 28/07/2025 | Marcelo Acuña  | Abner Arboleda y Christian Bonifaz | Implementación base del sistema Healthy+ |
+| Segunda Iteración V1.0.0 | 15/12/2025 | Abner Arboleda | Christian Bonifaz                  | Expansión de funcionalidades y mejoras   |
+| Segunda Iteración V1.0.1 | 15/12/2025 | Abner Arboleda | Christian Bonifaz                  | Expansión de funcionalidades y mejoras   |
 
 ## Tecnologías Utilizadas
 
