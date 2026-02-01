@@ -15,10 +15,10 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Líneas Base Relacionadas
 
-- **LBA - Análisis:** Contiene diagramas de actividades y documentación de análisis funcional y de procesos
+- **LBA - Análisis:** Contiene diagramas de clases
 - **LBC - Implementación:** Contiene código fuente frontend y backend del proyecto
-- **LBD - Diseño:** Contiene diagramas de flujo y diagramas de casos de uso
-- **LBR - Requisitos:** Contiene la especificación completa de requisitos y diagramas de flujo
+- **LBD - Diseño:** Contiene diagramas de casos de uso
+- **LBR - Requisitos:** Contiene la especificación completa de requisitos
 
 ## Contenido Principal
 
@@ -37,12 +37,11 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones de la Matriz IREB
 
-| Versión                           | Fecha      | Responsable       | Aprobado por                      |
-| --------------------------------- | ---------- | ----------------- | --------------------------------- |
-| `Matriz_IREB_V1.0.0.xlsx`         | 02/07/2025 | Abner Arboleda    | Marcelo Acuña y Christian Bonifaz |
-| `Matriz_IREB_V1.0.1.xlsx`         | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda    |
-| `Matriz_IREB_V1.0.2.xlsx`         | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda    |
-| `Matriz_IREB_Informe_V1.0.0.docx` | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda    |
-
+| Versión                    | Fecha      | Responsable       | Aprobado por      |
+| -------------------------- | ---------- | ----------------- | ----------------- |
+| `IREB_V1.0.0.xlsx`         | 02/07/2025 | Abner Arboleda    | Christian Bonifaz |
+| `IREB_V1.0.1.xlsx`         | 02/07/2025 | Christian Bonifaz | Abner Arboleda    |
+| `IREB_V1.0.2.xlsx`         | 02/07/2025 | Christian Bonifaz | Abner Arboleda    |
+| `IREB_Informe_V1.0.0.docx` | 02/07/2025 | Christian Bonifaz | Abner Arboleda    |
 
 Matriz de trazabilidad de requisitos con documentación complementaria que valida formalmente la especificación en la línea base de requisitos.

@@ -15,10 +15,10 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Líneas Base Relacionadas
 
-- **LBA - Análisis:** Contiene diagramas de actividades y documentación de análisis funcional y de procesos
+- **LBA - Análisis:** Contiene diagramas de clases
 - **LBC - Implementación:** Contiene código fuente frontend y backend del proyecto
-- **LBD - Diseño:** Contiene diagramas de flujo y diagramas de casos de uso
-- **LBR - Requisitos:** Contiene la especificación completa de requisitos y diagramas de flujo
+- **LBD - Diseño:** Contiene diagramas de casos de uso
+- **LBR - Requisitos:** Contiene la especificación completa de requisitos
 
 ## Contenido Principal del SRS
 
@@ -37,10 +37,9 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del SRS
 
-| Versión          | Fecha      | Responsable   | Aprobado por                       |
-| ---------------- | ---------- | ------------- | ---------------------------------- |
-| `SRS_V1.0.0.pdf` | 12/06/2025 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
-
-| `SRS_V1.0.1.pdf` | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda |
+| Versión                | Fecha      | Responsable       | Aprobado por                       |
+| ---------------------- | ---------- | ----------------- | ---------------------------------- |
+| `SRS_Anexo_V1.0.0.pdf` | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
+| `SRS_V1.0.1.pdf`       | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda     |
 
 Estas versiones reflejan la evolución del documento conforme al proceso de análisis y validación de requisitos. Cada versión corresponde a una revisión validada en la línea base.
