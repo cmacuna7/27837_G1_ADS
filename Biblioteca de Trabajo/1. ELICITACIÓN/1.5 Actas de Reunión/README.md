@@ -1,6 +1,6 @@
 # Actas de Reunión (ACTA)
 
-Este directorio contiene los documentos que forman parte del Elemento de Configuración del Software (ECS) relacionado con las actas de reunión del proyecto **Healthy+**.
+Este directorio contiene los registros que forman parte del Elemento de Configuración del Software (ECS) relacionado con las actas de reunión del proyecto **Healthy+**.
 
 ## Información del ECS
 
@@ -9,8 +9,8 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 - **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 - **Proyecto:** Healthy+
 - **Línea base:** LBR - Línea Base Requisitos
-- **Tipo de ECS:** Documento (PDF y Video)
-- **Fecha de creación:** 08/01/2026
+- **Tipo de ECS:** Video (YouTube)
+- **Fecha de creación:** 25/01/2026
 - **ID del proyecto:** 27837_G1_ADS
 
 ## Líneas Base Relacionadas
@@ -22,14 +22,15 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Contenido Principal
 
-- Actas detalladas de cada reunión
-- Asuntos tratados y decisiones tomadas
-- Compromisos y responsabilidades asignadas
-- Archivos multimedia de reuniones
+- Grabaciones de video de presentaciones al cliente
+- Demostración de avances del proyecto
+- Validación de funcionalidades implementadas
+- Retroalimentación y aprobación del cliente
+- Registro visual de las presentaciones oficiales
 
 ## Fecha de inicio:
 
-08 de enero de 2026
+25 de enero de 2026
 
 ## Responsables:
 
@@ -37,8 +38,8 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones de las Actas de Reunión
 
-| Versión               | Fecha      | Responsable   | Aprobado por                       |
-| --------------------- | ---------- | ------------- | ---------------------------------- |
-| `ACTA_Reunión_01.pdf` | 10/06/2025 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
+| Versión            | Fecha      | Responsable       | Enlace                               |
+| ------------------ | ---------- | ----------------- | ------------------------------------ |
+| `Video Reunión 01` | 25/01/2026 | Christian Bonifaz | https://youtu.be/6fnDEkqc0tY         |
 
-Esta acta refleja los eventos clave y decisiones tomadas durante la reunión del proyecto, validada y autorizada por los responsables.
+Esta acta en formato de video refleja los eventos clave y decisiones tomadas durante la reunión del proyecto.
