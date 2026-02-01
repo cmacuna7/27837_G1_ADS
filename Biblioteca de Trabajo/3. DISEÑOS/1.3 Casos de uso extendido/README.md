@@ -1,9 +1,45 @@
 # Casos de Uso Extendido (CU)
 
-| **Versión** | **Descripción** | **Autor** | **Aprobado por** |
-|-------------|-----------------|-----------|------------------|
-| `CU_V1.0.0.pdf` | Diagrama de Casos de Uso de Contexto - Especificación del contexto del sistema Healthy+ | Marcelo Acuña, Abner Arboleda, Christian Bonifaz | Marcelo Acuña |
-| `CU_V1.0.1.pdf` | Diagrama de Casos de Uso Extendido - Especificación detallada de casos de uso del sistema | Marcelo Acuña, Abner Arboleda, Christian Bonifaz | Abner Arboleda |
+Este directorio contiene los documentos que forman parte del Elemento de Configuración del Software (ECS) relacionado con los casos de uso del proyecto **Healthy+**.
 
-Especificaciones de casos de uso que documentan las interacciones entre actores y el sistema Healthy+.
+## Información del ECS
 
+- **Código del ECS:** CU
+- **Nombre del ECS:** Casos de Uso Extendido
+- **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
+- **Proyecto:** Healthy+
+- **Línea base:** LBD - Línea Base Diseño
+- **Tipo de ECS:** Documento (PDF)
+- **Fecha de creación:** 28/07/2025
+- **ID del proyecto:** 27837_G1_ADS
+
+## Líneas Base Relacionadas
+
+- **LBA - Análisis:** Contiene diagramas de clases
+- **LBC - Implementación:** Contiene código fuente frontend y backend del proyecto
+- **LBD - Diseño:** Contiene diagramas de casos de uso
+- **LBR - Requisitos:** Contiene la especificación completa de requisitos
+
+## Contenido Principal
+
+- Diagramas de casos de uso de contexto
+- Especificaciones detalladas de casos de uso
+- Interacciones entre actores y sistema
+- Flujos principales y alternativos
+
+## Fecha de inicio:
+
+28 de julio de 2025
+
+## Responsables:
+
+Marcelo Acuña, Abner Arboleda, Christian Bonifaz
+
+# Historial de Versiones de Casos de Uso Extendido
+
+| Versión         | Fecha      | Responsable    | Aprobado por      |
+| --------------- | ---------- | -------------- | ----------------- |
+| `CU_V1.0.0.pdf` | 28/07/2025 | Abner Arboleda | Christian Bonifaz |
+| `CU_V1.0.1.pdf` | 28/07/2025 | Abner Arboleda | Christian Bonifaz |
+
+Estas versiones reflejan la evolución continua de los casos de uso extendido, validado y aprobado para el seguimiento del proyecto.

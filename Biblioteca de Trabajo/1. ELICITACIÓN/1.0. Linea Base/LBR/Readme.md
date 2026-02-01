@@ -1,10 +1,10 @@
-# Especificación de Requisitos de Software (SRS)
+# Especificación de Requisitos de Software (ERS)
 
 Este directorio contiene los documentos que forman parte del Elemento de Configuración del Software (ECS) relacionado con la especificación de requisitos del proyecto **Healthy+**.
 
 ## Información del ECS
 
-- **Código del ECS:** SRS
+- **Código del ECS:** ERS
 - **Nombre del ECS:** Especificación de Requisitos de Software
 - **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 - **Proyecto:** Healthy+
@@ -37,10 +37,9 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del SRS
 
-| Versión                | Fecha      | Responsable   | Aprobado por                       |
-| ---------------------- | ---------- | ------------- | ---------------------------------- |
-| `SRS_Anexo_V1.0.0.pdf` | 12/06/2025 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
-
-| `SRS_V1.0.1.pdf` | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda |
+| Versión                | Fecha      | Responsable       | Aprobado por                       |
+| ---------------------- | ---------- | ----------------- | ---------------------------------- |
+| `ERS_Anexo_V1.0.0.pdf` | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
+| `ERS_V1.0.1.pdf`       | 02/07/2025 | Christian Bonifaz | Abner Arboleda                     |
 
 Estas versiones reflejan la evolución del documento conforme al proceso de análisis y validación de requisitos. Cada versión corresponde a una revisión validada en la línea base.

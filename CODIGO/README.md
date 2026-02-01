@@ -88,10 +88,11 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 ## Historial de Versiones del Código
 
-| Iteración         | Fecha      | Responsable    | Aprobado por                       | Descripción                              |
-| ----------------- | ---------- | -------------- | ---------------------------------- | ---------------------------------------- |
-| Primera Iteración | 28/07/2025 | Marcelo Acuña  | Abner Arboleda y Christian Bonifaz | Implementación base del sistema Healthy+ |
-| Segunda Iteración | 15/12/2025 | Abner Arboleda | Christian Bonifaz                  | Expansión de funcionalidades y mejoras   |
+| Versión           | Fecha      | Responsable       | Aprobado por                       |
+| ----------------- | ---------- | ----------------- | ---------------------------------- |
+| `IMPL_V1.0.0.pdf` | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
+| `IMPL_V1.0.1.pdf` | 02/07/2025 | Christian Bonifaz | Abner Arboleda                     |
+| `IMPL_V1.0.2.pdf` | 02/07/2025 | abner Arboleda    | Christian Bonifaz                  |
 
 ## Tecnologías Utilizadas
 

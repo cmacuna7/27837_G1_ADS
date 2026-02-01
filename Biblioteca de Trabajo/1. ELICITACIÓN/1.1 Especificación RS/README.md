@@ -1,10 +1,10 @@
-# Especificación de Requisitos de Software (SRS)
+# Especificación de Requisitos de Software (ERS)
 
 Este directorio contiene los documentos que forman parte del Elemento de Configuración del Software (ECS) relacionado con la especificación de requisitos del proyecto **Healthy+**.
 
 ## Información del ECS
 
-- **Código del ECS:** SRS
+- **Código del ECS:** ERS
 - **Nombre del ECS:** Especificación de Requisitos de Software
 - **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 - **Proyecto:** Healthy+
