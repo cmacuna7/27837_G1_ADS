@@ -1,0 +1,391 @@
+@startuml Diagrama_Clases
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #FFFFFF
+skinparam classBorderColor #2C3E50
+skinparam packageBackgroundColor #F5F5F5
+skinparam ArrowColor #34495E
+
+title Diagrama de Clases - Sistema de Gestión de Medicamentos\nRF01, RF06, RF07
+
+' ========================================
+' CAPA DE MODELOS (ENTIDADES)
+' ========================================
+package "Models - Entidades de Negocio" #E8F4F8 {
+    
+    class Medicamento {
+        - id: Number
+        - nombre: String
+        - presentacion: String
+        - dosis: Number
+        - unidadDosis: String
+        - frecuencia: Number
+        - horarioPrimeraToma: String
+        - duracion: Number
+        - notas: String
+        - icono: String
+        - activo: Boolean
+        - fechaInicio: Date
+        - horariosGenerados: Array<Object>
+        
+        + constructor(data: Object)
+        + validar(): Object
+        + generarHorarios(): Array<Object>
+        + activar(): void
+        + desactivar(): void
+        + toJSON(): Object
+        + {static} fromJSON(json: Object): Medicamento
+    }
+    
+    class EventoToma {
+        - id: String
+        - medicamentoId: Number
+        - horarioId: String
+        - nombreMedicamento: String
+        - tipo: String
+        - fecha: Date
+        - horaProgamada: String
+        - horaReal: String
+        - motivo: String
+        - notas: String
+        - dosis: Number
+        - unidadDosis: String
+        
+        + constructor(data: Object)
+        + validar(): Object
+        + obtenerDescripcion(): String
+        + obtenerEstado(): String
+        + toJSON(): Object
+        + {static} fromJSON(json: Object): EventoToma
+    }
+    
+    class Sintoma {
+        - id: String
+        - medicamentoId: Number
+        - nombreMedicamento: String
+        - descripcion: String
+        - categoria: String
+        - intensidad: String
+        - fecha: Date
+        - notas: String
+        - icono: String
+        
+        + constructor(data: Object)
+        + validar(): Object
+        + obtenerIconoPorCategoria(categoria: String): String
+        + obtenerDescripcion(): String
+        + toJSON(): Object
+        + {static} fromJSON(json: Object): Sintoma
+    }
+}
+
+' ========================================
+' CAPA DE CONFIGURACIÓN
+' ========================================
+package "Config - Configuración de BD" #FFF9E6 {
+    
+    class ConexionBD <<singleton>> {
+        - {static} instancia: ConexionBD
+        - conexion: IDBDatabase
+        - nombreBD: String = "MedicamentosDB"
+        - version: Number = 2
+        
+        - constructor()
+        + {static} getInstancia(): ConexionBD
+        + obtenerConexion(): Promise<IDBDatabase>
+        - crearAlmacenes(db: IDBDatabase): void
+        - migrarDatos(db: IDBDatabase, oldVersion: Number): void
+    }
+}
+
+' ========================================
+' CAPA DE SERVICIOS
+' ========================================
+package "Services - Lógica de Negocio" #E8F5E9 {
+    
+    abstract class Sujeto {
+        # observadores: Array<Observador>
+        
+        + suscribir(observador: Observador): void
+        + desuscribir(observador: Observador): void
+        + notificar(data: Object): void
+    }
+    
+    abstract class Observador {
+        + {abstract} actualizar(data: Object): void
+    }
+    
+    class GestorAlmacenamiento {
+        - db: ConexionBD
+        - observadores: Array<Observador>
+        
+        + constructor()
+        
+        ' Operaciones Medicamentos
+        + guardarMedicamento(medicamento: Medicamento): Promise
+        + obtenerTodosMedicamentos(): Promise<Array>
+        + obtenerMedicamentoPorId(id: Number): Promise<Medicamento>
+        + actualizarMedicamento(medicamento: Medicamento): Promise
+        + eliminarMedicamento(id: Number): Promise
+        
+        ' Operaciones Horarios
+        + guardarHorarios(horarios: Array): Promise
+        + obtenerHorariosPorMedicamento(medicamentoId: Number): Promise<Array>
+        + actualizarHorario(horario: Object): Promise
+        
+        ' Operaciones Eventos (RF06)
+        + guardarEvento(evento: EventoToma): Promise
+        + obtenerTodosEventos(): Promise<Array>
+        + obtenerEventosPorMedicamento(medicamentoId: Number): Promise<Array>
+        + obtenerEventosPorFecha(fechaInicio: Date, fechaFin: Date): Promise<Array>
+        + eliminarEvento(id: String): Promise
+        
+        ' Operaciones Síntomas (RF07)
+        + guardarSintoma(sintoma: Sintoma): Promise
+        + obtenerTodosSintomas(): Promise<Array>
+        + obtenerSintomasPorMedicamento(medicamentoId: Number): Promise<Array>
+        + eliminarSintoma(id: String): Promise
+        
+        ' Observer
+        + suscribir(observador: Observador): void
+        + notificar(tipo: String, data: Object): void
+    }
+    
+    class GestorInformes {
+        - gestor: GestorAlmacenamiento
+        
+        + constructor()
+        
+        ' RF06-3: Generación PDF
+        + generarReportePDF(opciones: Object): Promise<Blob>
+        + generarPDFMedicamentos(): Promise<Blob>
+        + generarPDFSintomas(): Promise<Blob>
+        
+        ' RF06-4: Exportación Excel
+        + generarReporteExcel(opciones: Object): Promise<Blob>
+        + generarExcelMedicamentos(): Promise<Blob>
+        + generarExcelSintomas(): Promise<Blob>
+        
+        ' Métodos auxiliares
+        - obtenerEventosFiltrados(opciones: Object): Promise<Array>
+        - formatearDatosPDF(datos: Array): Object
+        - formatearDatosExcel(datos: Array): Array
+        - generarEstadisticas(eventos: Array): Object
+    }
+    
+    class NotificadorVisual {
+        + actualizar(data: Object): void
+        - mostrarNotificacion(mensaje: String, tipo: String): void
+        - mostrarAlerta(mensaje: String): void
+        - ocultarNotificacion(): void
+    }
+    
+    class NotificadorSonoro {
+        - sonidos: Object
+        
+        + actualizar(data: Object): void
+        - reproducirSonido(tipo: String): void
+        - cargarSonidos(): void
+    }
+    
+    class RelojSistema {
+        - intervalo: Number
+        - gestorAlmacenamiento: GestorAlmacenamiento
+        
+        + iniciar(): void
+        + detener(): void
+        + actualizar(data: Object): void
+        - verificarHorarios(): void
+        - activarAlarma(horario: Object): void
+    }
+}
+
+' ========================================
+' CAPA DE CONTROLADORES
+' ========================================
+package "Controllers - Coordinación" #FFE8E8 {
+    
+    class ControladorMedicamentos {
+        - gestorAlmacenamiento: GestorAlmacenamiento
+        - observadores: Array<Observador>
+        
+        + constructor()
+        + crearMedicamento(datos: Object): Promise<Object>
+        + obtenerTodos(): Promise<Object>
+        + obtenerPorId(id: Number): Promise<Object>
+        + actualizarMedicamento(id: Number, datos: Object): Promise<Object>
+        + eliminarMedicamento(id: Number): Promise<Object>
+        + obtenerMedicamentosActivos(): Promise<Object>
+        - notificarCambio(tipo: String, data: Object): void
+    }
+    
+    class ControladorFormulario {
+        - gestorAlmacenamiento: GestorAlmacenamiento
+        - controladorMedicamentos: ControladorMedicamentos
+        
+        + constructor()
+        + inicializar(): void
+        + cargarMedicamento(id: Number): Promise
+        + guardarFormulario(): Promise
+        - validarFormulario(): Object
+        - limpiarFormulario(): void
+        - mostrarError(mensaje: String): void
+    }
+    
+    class ControladorAlertas {
+        - gestorAlmacenamiento: GestorAlmacenamiento
+        - relojSistema: RelojSistema
+        
+        + constructor()
+        + inicializar(): void
+        + verificarAlertas(): void
+        + marcarTomado(horarioId: String): Promise
+        + marcarOmitido(horarioId: String, motivo: String): Promise
+        + marcarPospuesto(horarioId: String, nuevaHora: String): Promise
+    }
+    
+    class ControladorHistorial {
+        - gestorAlmacenamiento: GestorAlmacenamiento
+        - gestorInformes: GestorInformes
+        - vista: VistaHistorial
+        
+        + constructor()
+        + inicializar(): void
+        + cargarEventos(filtros: Object): Promise
+        + exportarPDF(opciones: Object): Promise
+        + exportarExcel(opciones: Object): Promise
+        - aplicarFiltros(eventos: Array, filtros: Object): Array
+    }
+    
+    class ControladorSintomas {
+        - gestorAlmacenamiento: GestorAlmacenamiento
+        - vista: VistaSintomas
+        
+        + constructor()
+        + inicializar(): void
+        + mostrarFormulario(medicamentoId: Number): Promise
+        + registrarSintoma(datos: Object): Promise
+        + cargarSintomas(medicamentoId: Number): Promise
+        + eliminarSintoma(id: String): Promise
+    }
+    
+    class ControladorDetalle {
+        - gestorAlmacenamiento: GestorAlmacenamiento
+        
+        + constructor()
+        + inicializar(medicamentoId: Number): void
+        + cargarDetalle(medicamentoId: Number): Promise
+        + agregarSintoma(medicamentoId: Number): Promise
+        + verHistorial(medicamentoId: Number): void
+    }
+}
+
+' ========================================
+' CAPA DE VISTAS
+' ========================================
+package "Views - Presentación" #F0E6FF {
+    
+    class VistaListaMedicamentos {
+        + renderizar(medicamentos: Array): void
+        + mostrarVacio(): void
+        + configurarEventos(callbacks: Object): void
+        - crearTarjetaMedicamento(medicamento: Medicamento): String
+        - obtenerIconoPresentacion(presentacion: String): String
+    }
+    
+    class VistaHistorial {
+        + renderizar(eventos: Array): void
+        + mostrarVacio(): void
+        + renderizarFiltros(medicamentos: Array): void
+        + mostrarModalExportar(): void
+        + configurarEventos(callbacks: Object): void
+        - crearFilaEvento(evento: EventoToma): String
+        - formatearFecha(fecha: Date): String
+    }
+    
+    class VistaSintomas {
+        + renderizar(sintomas: Array, medicamento: Medicamento): void
+        + mostrarVacio(): void
+        + mostrarFormulario(medicamento: Medicamento): void
+        + configurarEventos(callbacks: Object): void
+        - crearTarjetaSintoma(sintoma: Sintoma): String
+        - obtenerIconoCategoria(categoria: String): String
+    }
+}
+
+' ========================================
+' RELACIONES ENTRE CLASES
+' ========================================
+
+' Relaciones de Herencia
+Sujeto <|-- GestorAlmacenamiento
+Observador <|.. NotificadorVisual
+Observador <|.. NotificadorSonoro
+Observador <|.. RelojSistema
+
+' Relaciones de Composición y Agregación
+GestorAlmacenamiento *-- ConexionBD : usa
+GestorInformes *-- GestorAlmacenamiento : usa
+GestorAlmacenamiento o-- "*" Observador : notifica
+
+' Controladores usan Servicios
+ControladorMedicamentos --> GestorAlmacenamiento : usa
+ControladorFormulario --> GestorAlmacenamiento : usa
+ControladorFormulario --> ControladorMedicamentos : usa
+ControladorAlertas --> GestorAlmacenamiento : usa
+ControladorAlertas --> RelojSistema : usa
+ControladorHistorial --> GestorAlmacenamiento : usa
+ControladorHistorial --> GestorInformes : usa
+ControladorSintomas --> GestorAlmacenamiento : usa
+ControladorDetalle --> GestorAlmacenamiento : usa
+
+' Controladores usan Vistas
+ControladorHistorial --> VistaHistorial : actualiza
+ControladorSintomas --> VistaSintomas : actualiza
+
+' Servicios usan Modelos
+GestorAlmacenamiento ..> Medicamento : gestiona
+GestorAlmacenamiento ..> EventoToma : gestiona
+GestorAlmacenamiento ..> Sintoma : gestiona
+GestorInformes ..> EventoToma : procesa
+GestorInformes ..> Sintoma : procesa
+
+' Controladores usan Modelos
+ControladorMedicamentos ..> Medicamento : crea/valida
+ControladorHistorial ..> EventoToma : consulta
+ControladorSintomas ..> Sintoma : crea/valida
+
+' Vistas renderizan Modelos
+VistaListaMedicamentos ..> Medicamento : renderiza
+VistaHistorial ..> EventoToma : renderiza
+VistaSintomas ..> Sintoma : renderiza
+
+' Notas explicativas
+note right of Medicamento
+    **RF01: Gestión de Medicamentos**
+    Entidad principal que almacena
+    toda la información de un medicamento
+    y genera los horarios de toma
+end note
+
+note right of EventoToma
+    **RF06: Historial de Medicación**
+    Registra cada evento de toma,
+    omisión o postergación de un
+    medicamento en el tiempo
+end note
+
+note right of Sintoma
+    **RF07: Seguimiento de Síntomas**
+    Registra síntomas asociados a
+    medicamentos con categorización
+    e intensidad
+end note
+
+note bottom of GestorInformes
+    **RF06-3 y RF06-4**
+    Genera reportes en PDF (jsPDF)
+    y Excel (SheetJS) del historial
+end note
+
+@enduml

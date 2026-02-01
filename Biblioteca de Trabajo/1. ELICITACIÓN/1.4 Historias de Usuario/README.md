@@ -1,10 +1,10 @@
-# Historias de Usuario (HUS)
+# Historias de Usuario (HU)
 
 Este directorio contiene los documentos que forman parte del Elemento de Configuración del Software (ECS) relacionado con las historias de usuario del proyecto **Healthy+**.
 
 ## Información del ECS
 
-- **Código del ECS:** HUS
+- **Código del ECS:** HU
 - **Nombre del ECS:** Historias de Usuario
 - **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 - **Proyecto:** Healthy+
@@ -15,10 +15,10 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Líneas Base Relacionadas
 
-- **LBA - Análisis:** Contiene diagramas de actividades y documentación de análisis funcional y de procesos
+- **LBA - Análisis:** Contiene diagramas de clases
 - **LBC - Implementación:** Contiene código fuente frontend y backend del proyecto
-- **LBD - Diseño:** Contiene diagramas de flujo y diagramas de casos de uso
-- **LBR - Requisitos:** Contiene la especificación completa de requisitos y diagramas de flujo
+- **LBD - Diseño:** Contiene diagramas de casos de uso
+- **LBR - Requisitos:** Contiene la especificación completa de requisitos
 
 ## Contenido Principal
 
@@ -41,6 +41,6 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 | ---------------- | ---------- | ----------------- | ---------------------------------- |
 | `HU_V1.0.0.xlsx` | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
 | `HU_V1.0.1.xlsx` | 18/06/2025 | Abner Arboleda    | Christian Bonifaz                  |
-| `HU_V1.0.2.xlsx` | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda     |
+| `HU_V1.0.2.xlsx` | 02/07/2025 | Christian Bonifaz | Abner Arboleda                     |
 
 Estas versiones reflejan la evolución y refinamiento de las historias de usuario, aprobadas formalmente para el desarrollo del sistema.

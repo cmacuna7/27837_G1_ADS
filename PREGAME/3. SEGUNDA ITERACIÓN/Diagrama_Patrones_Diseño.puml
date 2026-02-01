@@ -1,0 +1,174 @@
+@startuml Diagrama_Patrones_Diseño
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #E8F4F8
+skinparam classBorderColor #2C3E50
+skinparam packageBackgroundColor #FFF9E6
+skinparam packageBorderColor #D4A017
+
+title Diagrama de Patrones de Diseño - Sistema de Gestión de Medicamentos
+
+package "PATRÓN OBSERVER" #FFF9E6 {
+    
+    abstract class Sujeto <<interface>> {
+        - observadores: Array<Observador>
+        + suscribir(observador: Observador): void
+        + desuscribir(observador: Observador): void
+        + notificar(data: Object): void
+    }
+    
+    abstract class Observador <<interface>> {
+        + {abstract} actualizar(data: Object): void
+    }
+    
+    class GestorAlmacenamiento {
+        - observadores: Array<Observador>
+        + suscribir(observador: Observador): void
+        + notificar(tipo: String, data: Object): void
+    }
+    
+    class NotificadorVisual {
+        + actualizar(data: Object): void
+        - mostrarNotificacion(mensaje: String, tipo: String): void
+    }
+    
+    class NotificadorSonoro {
+        + actualizar(data: Object): void
+        - reproducirSonido(tipo: String): void
+    }
+    
+    class RelojSistema {
+        + actualizar(data: Object): void
+        - verificarHorarios(): void
+        - activarAlarma(horario: Object): void
+    }
+    
+    Sujeto <|-- GestorAlmacenamiento
+    Observador <|.. NotificadorVisual
+    Observador <|.. NotificadorSonoro
+    Observador <|.. RelojSistema
+    
+    GestorAlmacenamiento o--> "*" Observador : notifica >
+}
+
+package "PATRÓN MVC (Model-View-Controller)" #E8F5E9 {
+    
+    together {
+        class "<<Model>>\nMedicamento" as Medicamento {
+            - id: Number
+            - nombre: String
+            - presentacion: String
+            - dosis: Number
+            - frecuencia: Number
+            + validar(): Object
+            + generarHorarios(): Array
+            + toJSON(): Object
+        }
+        
+        class "<<Model>>\nEventoToma" as EventoToma {
+            - id: String
+            - medicamentoId: Number
+            - tipo: String
+            - fecha: Date
+            + validar(): Object
+            + toJSON(): Object
+        }
+        
+        class "<<Model>>\nSintoma" as Sintoma {
+            - id: String
+            - medicamentoId: Number
+            - categoria: String
+            - intensidad: String
+            + validar(): Object
+            + toJSON(): Object
+        }
+    }
+    
+    together {
+        class "<<View>>\nVistaListaMedicamentos" as VistaLista {
+            + renderizar(medicamentos: Array): void
+            + mostrarVacio(): void
+            + configurarEventos(callbacks: Object): void
+        }
+        
+        class "<<View>>\nVistaHistorial" as VistaHistorial {
+            + renderizar(eventos: Array): void
+            + mostrarVacio(): void
+            + renderizarFiltros(): void
+        }
+        
+        class "<<View>>\nVistaSintomas" as VistaSintomas {
+            + renderizar(sintomas: Array): void
+            + mostrarFormulario(): void
+            + actualizarLista(sintomas: Array): void
+        }
+    }
+    
+    together {
+        class "<<Controller>>\nControladorMedicamentos" as ControladorMed {
+            - gestorAlmacenamiento: GestorAlmacenamiento
+            + crearMedicamento(datos: Object): Promise
+            + obtenerTodos(): Promise
+            + actualizarMedicamento(id, datos): Promise
+            + eliminarMedicamento(id): Promise
+        }
+        
+        class "<<Controller>>\nControladorHistorial" as ControladorHist {
+            - gestorAlmacenamiento: GestorAlmacenamiento
+            - gestorInformes: GestorInformes
+            + obtenerEventos(filtros: Object): Promise
+            + exportarPDF(opciones: Object): Promise
+            + exportarExcel(opciones: Object): Promise
+        }
+        
+        class "<<Controller>>\nControladorSintomas" as ControladorSint {
+            - gestorAlmacenamiento: GestorAlmacenamiento
+            + registrarSintoma(datos: Object): Promise
+            + obtenerSintomas(medicamentoId): Promise
+            + eliminarSintoma(id): Promise
+        }
+    }
+    
+    ControladorMed ..> Medicamento : usa
+    ControladorHist ..> EventoToma : usa
+    ControladorSint ..> Sintoma : usa
+    
+    ControladorMed ..> VistaLista : actualiza
+    ControladorHist ..> VistaHistorial : actualiza
+    ControladorSint ..> VistaSintomas : actualiza
+    
+    VistaLista ..> ControladorMed : eventos >
+    VistaHistorial ..> ControladorHist : eventos >
+    VistaSintomas ..> ControladorSint : eventos >
+}
+
+package "PATRÓN SINGLETON" #FFE8E8 {
+    class ConexionBD <<singleton>> {
+        - {static} instancia: ConexionBD
+        - conexion: IDBDatabase
+        - nombreBD: String
+        - version: Number
+        - {static} getInstancia(): ConexionBD
+        + obtenerConexion(): Promise<IDBDatabase>
+        - crearAlmacenes(db: IDBDatabase): void
+    }
+}
+
+package "PATRÓN STRATEGY (Implícito)" #F0E6FF {
+    class GestorInformes {
+        + generarReportePDF(opciones: Object): Promise
+        + generarReporteExcel(opciones: Object): Promise
+        - formatearDatosPDF(datos: Array): Object
+        - formatearDatosExcel(datos: Array): Object
+    }
+}
+
+ControladorMed --> GestorAlmacenamiento : usa
+ControladorHist --> GestorAlmacenamiento : usa
+ControladorSint --> GestorAlmacenamiento : usa
+ControladorHist --> GestorInformes : usa
+
+GestorAlmacenamiento --> ConexionBD : usa
+GestorInformes --> GestorAlmacenamiento : usa
+
+@enduml

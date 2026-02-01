@@ -1,0 +1,270 @@
+@startuml Diagrama_Arquitectura
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam componentBackgroundColor #FFFFFF
+skinparam componentBorderColor #2C3E50
+skinparam packageBackgroundColor #F5F5F5
+skinparam rectangleBackgroundColor #E8F4F8
+skinparam databaseBackgroundColor #FFF9E6
+skinparam ArrowColor #34495E
+
+title Arquitectura del Sistema de Gestión de Medicamentos - MVC + Observer Pattern
+
+package "CAPA DE PRESENTACIÓN" <<Views>> #E8F4F8 {
+    
+    rectangle "index.html" as HTML {
+        component "Página Principal" as MainPage
+        component "Navegación" as Navigation
+        component "Contenedor de Pantallas" as ScreenContainer
+    }
+    
+    component "VistaListaMedicamentos.js" as VistaLista
+    component "VistaHistorial.js" as VistaHistorial
+    component "VistaSintomas.js" as VistaSintomas
+    
+    component "styles.css" as CSS {
+        note right
+            Estilos globales
+            Bootstrap Icons
+            Animaciones
+            Responsive Design
+        end note
+    }
+    
+    HTML -down-> VistaLista
+    HTML -down-> VistaHistorial
+    HTML -down-> VistaSintomas
+    HTML -down-> CSS
+}
+
+package "CAPA DE CONTROL" <<Controllers>> #FFE8E8 {
+    
+    component "ControladorMedicamentos.js" as CtrlMed
+    note right of CtrlMed
+        RF01: Gestión de Medicamentos
+        CRUD completo
+        Validación de datos
+        Generación de horarios
+    end note
+    
+    component "ControladorFormulario.js" as CtrlForm
+    
+    component "ControladorAlertas.js" as CtrlAlert
+    note right of CtrlAlert
+        RF02/RF03/RF04/RF05
+        Gestión de alertas
+        Registro de tomas
+    end note
+    
+    component "ControladorHistorial.js" as CtrlHist
+    note right of CtrlHist
+        RF06: Informes de Historial
+        Exportación PDF/Excel
+        Filtros y estadísticas
+    end note
+    
+    component "ControladorSintomas.js" as CtrlSint
+    note right of CtrlSint
+        RF07: Seguimiento de Síntomas
+        Registro de síntomas
+        Categorización
+    end note
+    
+    component "ControladorDetalle.js" as CtrlDetail
+}
+
+package "CAPA DE MODELO" <<Models>> #E8F5E9 {
+    
+    component "Medicamento.js" as ModelMed
+    note bottom of ModelMed
+        Atributos:
+        id, nombre, presentación
+        dosis, frecuencia, horarios
+        estado activo/inactivo
+    end note
+    
+    component "EventoToma.js" as ModelEvento
+    note bottom of ModelEvento
+        Atributos:
+        medicamentoId, tipo
+        fecha, hora, motivo
+    end note
+    
+    component "Sintoma.js" as ModelSintoma
+    note bottom of ModelSintoma
+        Atributos:
+        medicamentoId, categoría
+        intensidad, fecha
+    end note
+}
+
+package "CAPA DE SERVICIOS" <<Services>> #F0E6FF {
+    
+    component "GestorAlmacenamiento.js" as ServStorage
+    note right of ServStorage
+        Patrón Observer - Sujeto
+        Persistencia en IndexedDB
+        Notifica cambios
+    end note
+    
+    component "GestorInformes.js" as ServReports
+    note right of ServReports
+        RF06: Reportes PDF/Excel
+        Integra jsPDF y SheetJS
+    end note
+    
+    component "RelojSistema.js" as ServClock
+    note right of ServClock
+        Patrón Observer
+        RF02: Recordatorios
+        Verifica horarios
+    end note
+    
+    component "NotificadorVisual.js" as ServVisual
+    note right of ServVisual
+        Patrón Observer
+        RF03: Alertas Visuales
+    end note
+    
+    component "NotificadorSonoro.js" as ServAudio
+    note right of ServAudio
+        Patrón Observer
+        RF04: Alertas Sonoras
+    end note
+    
+    component "Sujeto.js / Observador.js" as PatternObs
+    note right of PatternObs
+        Patrón Observer
+        Interfaces base
+    end note
+}
+
+package "CAPA DE CONFIGURACIÓN" #FFF9E6 {
+    
+    component "Database.js" as ConfigDB
+    note right of ConfigDB
+        Patrón Singleton
+        Conexión única a IndexedDB
+    end note
+    
+    component "app.js" as AppMain
+    note right of AppMain
+        Punto de entrada
+        Inicializa sistema
+    end note
+}
+
+database "IndexedDB - MedicamentosDB v2" as IndexedDB {
+    folder "medicamentos" as StoreMed
+    folder "horarios" as StoreHor
+    folder "eventos_toma" as StoreEvt
+    folder "sintomas" as StoreSym
+}
+
+note right of IndexedDB
+    Almacenes:
+    - medicamentos
+    - horarios
+    - eventos_toma
+    - sintomas
+end note
+
+package "BIBLIOTECAS EXTERNAS" #F0F0F0 {
+    component "jsPDF 2.5.1" as LibPDF
+    component "SheetJS (xlsx) 0.18.5" as LibExcel
+    component "Bootstrap Icons 1.11.3" as LibIcons
+}
+
+actor Usuario
+rectangle "Navegador Web" as Browser {
+    component "JavaScript Engine" as JSEngine
+    component "HTML Renderer" as HTMLRender
+    component "Web APIs" as WebAPIs
+}
+
+Usuario --> Browser
+Browser --> HTML
+Browser --> CSS
+
+VistaLista -down-> CtrlMed : eventos de usuario
+VistaLista -down-> CtrlDetail : ver detalle
+VistaHistorial -down-> CtrlHist : filtros, exportar
+VistaSintomas -down-> CtrlSint : registrar síntoma
+
+CtrlForm -up-> VistaLista : actualizar lista
+CtrlHist -up-> VistaHistorial : renderizar eventos
+CtrlSint -up-> VistaSintomas : mostrar síntomas
+
+CtrlMed -down-> ModelMed : crear, validar
+CtrlHist -down-> ModelEvento : consultar
+CtrlSint -down-> ModelSintoma : crear, validar
+CtrlDetail -down-> ModelMed : consultar
+
+CtrlMed -down-> ServStorage : persistir
+CtrlForm -down-> ServStorage : guardar/cargar
+CtrlAlert -down-> ServStorage : registrar eventos
+CtrlHist -down-> ServStorage : consultar eventos
+CtrlHist -down-> ServReports : generar reportes
+CtrlSint -down-> ServStorage : guardar síntomas
+CtrlDetail -down-> ServStorage : consultar
+
+ServStorage -down-> ConfigDB : obtener conexión
+ServReports -down-> ServStorage : consultar datos
+
+ConfigDB -down-> IndexedDB : gestionar
+
+ServStorage -right-> ServClock : notifica
+ServStorage -right-> ServVisual : notifica
+ServStorage -right-> ServAudio : notifica
+
+ServClock -up-> CtrlAlert : activar alarma
+ServVisual -up-> Browser : mostrar UI
+ServAudio -up-> Browser : reproducir audio
+
+ServReports --> LibPDF : usar
+ServReports --> LibExcel : usar
+HTML --> LibIcons : importar
+
+AppMain -down-> CtrlMed : inicializar
+AppMain -down-> CtrlForm : inicializar
+AppMain -down-> CtrlAlert : inicializar
+AppMain -down-> ServClock : iniciar
+AppMain -down-> ConfigDB : configurar
+
+note top of "CAPA DE PRESENTACIÓN"
+    Responsabilidad:
+    Renderizar UI y eventos
+end note
+
+note top of "CAPA DE CONTROL"
+    Responsabilidad:
+    Lógica de negocio
+end note
+
+note top of "CAPA DE MODELO"
+    Responsabilidad:
+    Entidades de dominio
+end note
+
+note top of "CAPA DE SERVICIOS"
+    Responsabilidad:
+    Persistencia y reportes
+end note
+
+legend right
+  <b>Requerimientos Funcionales</b>
+  RF01: Gestión de Medicamentos
+  RF02: Recordatorios
+  RF03: Alertas Visuales
+  RF04: Alertas Sonoras
+  RF05: Registro de Tomas
+  RF06: Informes de Historial
+  RF07: Seguimiento de Síntomas
+  ----
+  <b>Patrones de Diseño</b>
+  MVC: Model-View-Controller
+  Observer: Sujeto-Observador
+  Singleton: Instancia Única
+end legend
+
+@enduml
