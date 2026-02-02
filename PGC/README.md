@@ -1,54 +1,49 @@
 # Plan General del Proyecto (PGC)
 
-Este directorio contiene el Plan General del Proyecto (PGC) para el proyecto **Healthy+**, que establece la estructura, alcance, metodología y cronograma general del desarrollo.
+Este directorio contiene los documentos que forman parte del Elemento de Configuración del Software (ECS) relacionado con el Plan General del Proyecto del proyecto **Healthy+**.
 
-## Información General
+## Información del ECS
 
-- **Nombre del Proyecto:** Healthy+
-- **ID del proyecto:** 27837_G1_ADS
-- **Tipo de Documento:** Plan de Gestión de Proyecto
+- **Código del ECS:** PGC
+- **Nombre del ECS:** Plan General del Proyecto
+- **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
+- **Proyecto:** Healthy+
+- **Línea base:** LBD - Línea Base Diseño
+- **Tipo de ECS:** Documento (PDF)
 - **Fecha de creación:** 21/01/2026
+- **ID del proyecto:** 27837_G1_ADS
 
-## Propósito del PGC
+## Líneas Base Relacionadas
 
-El Plan General del Proyecto proporciona:
-
-- **Visión general** del proyecto y sus objetivos
-- **Alcance del proyecto** y principales hitos
-- **Estructura organizacional** y responsabilidades
-- **Cronograma general** del proyecto
-- **Descripción de fases** del desarrollo
-- **Metodología de trabajo** a utilizar
-- **Políticas y procedimientos** de gestión
-
-## Documentos Disponibles
-
-| Documento | Versión | Descripción |
-|-----------|---------|-------------|
-| `PGC_V1.0.pdf` | 1.0 | Versión inicial del plan |
-| `PGC_V1.1.pdf` | 1.1 | Actualización con ajustes y refinamientos |
+- **LBA - Análisis:** Contiene diagramas de clases
+- **LBC - Implementación:** Contiene código fuente frontend y backend del proyecto
+- **LBD - Diseño:** Contiene diagramas de casos de uso
+- **LBR - Requisitos:** Contiene la especificación completa de requisitos
 
 ## Contenido Principal
 
-El PGC incluye típicamente:
+- Visión general del proyecto y sus objetivos
+- Alcance del proyecto y principales hitos
+- Estructura organizacional y responsabilidades
+- Cronograma general del proyecto
+- Descripción de fases del desarrollo
+- Metodología de trabajo a utilizar
+- Políticas y procedimientos de gestión
 
-1. **Introducción y Propósito**
-2. **Descripción del Proyecto**
-3. **Organización del Proyecto**
-4. **Cronograma y Fases**
-5. **Riesgos y Mitigación**
-6. **Recursos y Presupuesto**
-7. **Criterios de Éxito**
-8. **Comunicación y Reportes**
+## Fecha de inicio:
 
-## Versión Recomendada
+21 de enero de 2026
 
-Se recomienda usar la versión más reciente (V1.1) para cualquier referencia a los planes del proyecto.
+## Responsables:
 
-## Contacto
+Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
-Para consultas relacionadas con el plan general del proyecto, contactar al equipo de gestión del proyecto Healthy+.
+# Historial de Versiones del Plan General del Proyecto
 
----
+| Versión        | Fecha      | Responsable       | Aprobado por      |
+| -------------- | ---------- | ----------------- | ----------------- |
+| `PGC_V1.0.pdf` | 21/01/2026 | Marcelo Acuña     | Abner Arboleda    |
+| `PGC_V1.1.pdf` | 25/01/2026 | Abner Arboleda    | Christian Bonifaz |
+| `PGC_V1.2.pdf` | 01/02/2026 | Christian Bonifaz | Abner Arboleda    |
 
-**Última actualización:** 21/01/2026
+Estas versiones reflejan la evolución continua del plan general del proyecto, validado y aprobado para el seguimiento del proyecto.
