@@ -23,10 +23,11 @@ El Plan General del Proyecto proporciona:
 
 ## Documentos Disponibles
 
-| Documento | Versión | Descripción |
-|-----------|---------|-------------|
-| `PGC_V1.0.pdf` | 1.0 | Versión inicial del plan |
-| `PGC_V1.1.pdf` | 1.1 | Actualización con ajustes y refinamientos |
+| Documento      | Versión | Fecha      | Responsable       | Aprobado por   |
+| -------------- | ------- | ---------- | ----------------- | -------------- |
+| `PGC_V1.0.pdf` | 1.0     | 21/01/2026 | Marcelo Acuña     | Abner Arboleda |
+| `PGC_V1.1.pdf` | 1.1     | 25/01/2026 | Abner Arboleda    | Christian Bonifaz |
+| `PGC_V1.2.pdf` | 1.2     | 01/02/2026 | Christian Bonifaz | Abner Arboleda |
 
 ## Contenido Principal
 
@@ -43,7 +44,7 @@ El PGC incluye típicamente:
 
 ## Versión Recomendada
 
-Se recomienda usar la versión más reciente (V1.1) para cualquier referencia a los planes del proyecto.
+Se recomienda usar la versión más reciente (V1.2) para cualquier referencia a los planes del proyecto.
 
 ## Contacto
 
@@ -51,4 +52,4 @@ Para consultas relacionadas con el plan general del proyecto, contactar al equip
 
 ---
 
-**Última actualización:** 21/01/2026
+**Última actualización:** 01/02/2026
