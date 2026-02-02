@@ -1,11 +1,11 @@
-# Plan General del Proyecto (PGC)
+# Plan de Gestión de la Calidad (PGC)
 
-Este directorio contiene los documentos que forman parte del Elemento de Configuración del Software (ECS) relacionado con el Plan General del Proyecto del proyecto **Healthy+**.
+Este directorio contiene los documentos que forman parte del Elemento de Configuración del Software (ECS) relacionado con el Plan de Gestión de la Calidad del proyecto **Healthy+**.
 
 ## Información del ECS
 
 - **Código del ECS:** PGC
-- **Nombre del ECS:** Plan General del Proyecto
+- **Nombre del ECS:** Plan de Gestión de la Calidad
 - **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 - **Proyecto:** Healthy+
 - **Línea base:** LBD - Línea Base Diseño
@@ -22,13 +22,12 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Contenido Principal
 
-- Visión general del proyecto y sus objetivos
-- Alcance del proyecto y principales hitos
-- Estructura organizacional y responsabilidades
-- Cronograma general del proyecto
-- Descripción de fases del desarrollo
-- Metodología de trabajo a utilizar
-- Políticas y procedimientos de gestión
+- Políticas y estándares de calidad del proyecto
+- Procedimientos de aseguramiento de la calidad
+- Métricas y criterios de aceptación
+- Planificación de revisiones y auditorías
+- Gestión de no conformidades
+- Mejora continua del proceso
 
 ## Fecha de inicio:
 
@@ -38,7 +37,7 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
-# Historial de Versiones del Plan General del Proyecto
+# Historial de Versiones del Plan de Gestión de la Calidad
 
 | Versión        | Fecha      | Responsable       | Aprobado por      |
 | -------------- | ---------- | ----------------- | ----------------- |
@@ -46,4 +45,4 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 | `PGC_V1.1.pdf` | 25/01/2026 | Abner Arboleda    | Christian Bonifaz |
 | `PGC_V1.2.pdf` | 01/02/2026 | Christian Bonifaz | Abner Arboleda    |
 
-Estas versiones reflejan la evolución continua del plan general del proyecto, validado y aprobado para el seguimiento del proyecto.
+Estas versiones reflejan la evolución continua del Plan de Gestión de la Calidad, validado y aprobado para el seguimiento del proyecto.

@@ -37,10 +37,8 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del Perfil del Proyecto
 
-| Versión            | Fecha      | Responsable    | Aprobado por                       |
-| ------------------ | ---------- | -------------- | ---------------------------------- |
-| `PERF_V1.0.0.docx` | 05/12/2025 | Marcelo Acuña  | Abner Arboleda y Christian Bonifaz |
-| `PERF_V1.0.1.docx` | 01/02/2026 | Abner Arboleda | Christian Bonifaz                  |
-| `PERF_V1.0.2.docx` | 02/02/2026 | Marcelo Acuña  | Abner Arboleda y Christian Bonifaz |
+| Versión            | Fecha      | Responsable   | Aprobado por                       |
+| ------------------ | ---------- | ------------- | ---------------------------------- |
+| `PERF_V1.0.2.docx` | 02/02/2026 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
 
-Estas versiones reflejan la evolución continua del perfil del proyecto en desarrollo.
+Esta versión refleja el estado actual del perfil del proyecto, validado y aprobado para el seguimiento del proyecto.

@@ -9,7 +9,7 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 - **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 - **Proyecto:** Healthy+
 - **Línea base:** LBR - Línea Base Requisitos
-- **Tipo de ECS:** Documento (XLSX y CSV)
+- **Tipo de ECS:** Documento (XLSX)
 - **Fecha de creación:** 08/01/2026
 - **ID del proyecto:** 27837_G1_ADS
 
@@ -45,4 +45,4 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 | `BL_V1.0.3.xlsx` | 05/08/2025 | Abner Arboleda    | Christian Bonifaz                  |
 | `BL_V2.0.0.xlsx` | 21/08/2025 | Christian Bonifaz | Abner Arboleda                     |
 
-Estas versiones reflejan la evolución continua del backlog, validado y aprobado para el seguimiento del proyecto.
+Estas versiones reflejan la evolución continua del backlog en desarrollo.

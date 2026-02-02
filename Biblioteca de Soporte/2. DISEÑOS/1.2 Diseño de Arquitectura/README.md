@@ -1,7 +1,0 @@
-# 📌 Versiones y Variantes - Arquitectura del Sistema
-
-| **Código del ECS** | **Descripción del ECS**                                         | **Versión/Variante** | **Fecha de creación** | **Autor(es)**                                         | **Archivo**                              | **Observaciones**                                                                 | **Variante de requisitos de usuario** | **Variante de plataforma**          |
-|--------------------|------------------------------------------------------------------|-----------------------|------------------------|-------------------------------------------------------|------------------------------------------|-----------------------------------------------------------------------------------|---------------------------------------|-------------------------------------|
-| ARQ                | Diseño de la arquitectura del sistema en capas                   | V1.0.0                | 28/07/2025             | Marcelo Acuña, Abner Arboleda, Christian Bonifaz      | ARQ_V1.0.0.pdf                           | Diseño de la arquitectura de 3 capas para el sistema Healthy+ | Español                               | Windows 11                          |
-
-**Descripción:** Este documento presenta el diseño arquitectónico en capas (Presentación, Lógica de Negocio, Persistencia) para el sistema Healthy+, estableciendo los componentes y sus interrelaciones.

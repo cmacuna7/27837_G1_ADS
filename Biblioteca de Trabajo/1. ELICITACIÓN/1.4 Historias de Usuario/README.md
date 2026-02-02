@@ -43,4 +43,4 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 | `HU_V1.0.1.xlsx` | 18/06/2025 | Abner Arboleda    | Christian Bonifaz                  |
 | `HU_V1.0.2.xlsx` | 02/07/2025 | Christian Bonifaz | Abner Arboleda                     |
 
-Estas versiones reflejan la evolución y refinamiento de las historias de usuario, aprobadas formalmente para el desarrollo del sistema.
+Estas versiones reflejan la evolución y refinamiento de las historias de usuario en desarrollo.

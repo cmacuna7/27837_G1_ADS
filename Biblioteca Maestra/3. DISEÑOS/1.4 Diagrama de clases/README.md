@@ -10,7 +10,7 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 - **Proyecto:** Healthy+
 - **Línea base:** LBD - Línea Base Diseño
 - **Tipo de ECS:** Documento (PDF)
-- **Fecha de creación:** 28/07/2025
+- **Fecha de creación:** 15/12/2025
 - **ID del proyecto:** 27837_G1_ADS
 
 ## Líneas Base Relacionadas
@@ -29,7 +29,7 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Fecha de inicio:
 
-28 de julio de 2025
+15 de diciembre de 2025
 
 ## Responsables:
 
@@ -37,10 +37,8 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del Diagrama de Clases
 
-| Versión                | Fecha      | Responsable       | Aprobado por   |
-| ---------------------- | ---------- | ----------------- | -------------- |
-| `DC_V1.0.0.pdf`        | 28/07/2025 | Christian Bonifaz | Abner Arboleda |
-| `DC_V1.0.1.pdf`        | 28/07/2025 | Christian Bonifaz | Abner Arboleda |
-| `DC_Anexo_V1.0.1.png`  | 28/07/2025 | Christian Bonifaz | Abner Arboleda |
+| Versión         | Fecha      | Responsable       | Aprobado por   |
+| --------------- | ---------- | ----------------- | -------------- |
+| `DC_V1.0.0.pdf` | 15/12/2025 | Christian Bonifaz | Abner Arboleda |
 
-Estas versiones reflejan la evolución continua del diagrama de clases en desarrollo.
+Esta versión refleja el estado actual del diagrama de clases, validado y aprobado para el seguimiento del proyecto.

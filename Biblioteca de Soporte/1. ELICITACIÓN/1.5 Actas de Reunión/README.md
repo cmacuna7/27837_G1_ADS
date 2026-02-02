@@ -15,17 +15,17 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Líneas Base Relacionadas
 
-- **LBA - Análisis:** Contiene diagramas de actividades y documentación de análisis funcional y de procesos
+- **LBA - Análisis:** Contiene diagramas de clases
 - **LBC - Implementación:** Contiene código fuente frontend y backend del proyecto
-- **LBD - Diseño:** Contiene diagramas de flujo y diagramas de casos de uso
-- **LBR - Requisitos:** Contiene la especificación completa de requisitos y diagramas de flujo
+- **LBD - Diseño:** Contiene diagramas de casos de uso
+- **LBR - Requisitos:** Contiene la especificación completa de requisitos
 
 ## Contenido Principal
 
-* Actas detalladas de cada reunión
-* Asuntos tratados y decisiones tomadas
-* Compromisos y responsabilidades asignadas
-* Archivos multimedia de reuniones
+- Actas detalladas de cada reunión
+- Asuntos tratados y decisiones tomadas
+- Compromisos y responsabilidades asignadas
+- Archivos multimedia de reuniones
 
 ## Fecha de inicio:
 
@@ -37,8 +37,8 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones de las Actas de Reunión
 
-| Versión             | Fecha      | Responsable       | Aprobado por                         |
-|---------------------|------------|-------------------|--------------------------------------|
-| `Acta_Reunión_01.pdf` | 10/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz   |
+| Versión               | Fecha      | Responsable   | Aprobado por                       |
+| --------------------- | ---------- | ------------- | ---------------------------------- |
+| `Acta_Reunión_01.pdf` | 10/06/2025 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
 
-Esta acta refleja los eventos clave y decisiones tomadas durante la reunión del proyecto, validada y autorizada por los responsables.
+Esta versión refleja el estado actual del acta de reunión, validada y autorizada por los responsables.

@@ -20,7 +20,7 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 - **LBD - Diseño:** Contiene diagramas de casos de uso
 - **LBR - Requisitos:** Contiene la especificación completa de requisitos
 
-## Contenido Principal del SRS
+## Contenido Principal
 
 - Especificación completa de requisitos del sistema
 - Diagramas de flujo del sistema
@@ -35,11 +35,11 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
-# Historial de Versiones del SRS
+# Historial de Versiones del ERS
 
 | Versión                | Fecha      | Responsable       | Aprobado por                       |
 | ---------------------- | ---------- | ----------------- | ---------------------------------- |
-| `SRS_Anexo_V1.0.0.pdf` | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
-| `SRS_V1.0.1.pdf`       | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda     |
+| `ERS_Anexo_V1.0.0.pdf` | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
+| `ERS_V1.0.0.pdf`       | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
 
-Estas versiones reflejan la evolución del documento conforme al proceso de análisis y validación de requisitos. Cada versión corresponde a una revisión validada en la línea base.
+Estas versiones reflejan la evolución del documento conforme al proceso de análisis y validación de requisitos. Cada versión corresponde a una revisión en desarrollo.

@@ -4,28 +4,28 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Información del ECS
 
-- **Código del ECS:** SRS  
-- **Nombre del ECS:** Especificación de Requisitos de Software  
+- **Código del ECS:** SRS
+- **Nombre del ECS:** Especificación de Requisitos de Software
 - **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
-- **Proyecto:** Healthy+  
-- **Línea base:** LBR - Línea Base Requisitos  
-- **Tipo de ECS:** Documento (PDF)  
-- **Fecha de creación:** 08/01/2026  
-- **ID del proyecto:** 27837_G1_ADS  
+- **Proyecto:** Healthy+
+- **Línea base:** LBR - Línea Base Requisitos
+- **Tipo de ECS:** Documento (PDF)
+- **Fecha de creación:** 08/01/2026
+- **ID del proyecto:** 27837_G1_ADS
 
 ## Líneas Base Relacionadas
 
-- **LBA - Análisis:** Contiene diagramas de actividades y documentación de análisis funcional y de procesos
+- **LBA - Análisis:** Contiene diagramas de clases
 - **LBC - Implementación:** Contiene código fuente frontend y backend del proyecto
-- **LBD - Diseño:** Contiene diagramas de flujo y diagramas de casos de uso
-- **LBR - Requisitos:** Contiene la especificación completa de requisitos y diagramas de flujo
+- **LBD - Diseño:** Contiene diagramas de casos de uso
+- **LBR - Requisitos:** Contiene la especificación completa de requisitos
 
-## Contenido Principal del SRS
+## Contenido Principal
 
-* Especificación completa de requisitos del sistema
-* Diagramas de flujo del sistema
-* Requisitos funcionales y no funcionales
-* Criterios de aceptación
+- Especificación completa de requisitos del sistema
+- Diagramas de flujo del sistema
+- Requisitos funcionales y no funcionales
+- Criterios de aceptación
 
 ## Fecha de inicio:
 
@@ -37,9 +37,8 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del SRS
 
-| Versión           | Fecha       | Responsable       | Aprobado por                         |
-|------------------|-------------|-------------------|--------------------------------------|
-| `SRS_V1.0.0.pdf` | 12/06/2025  | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz   |
-| `SRS_V1.0.2.pdf` | 02/07/2025  | Christian Bonifaz | Marcelo Acuña y Abner Arboleda      |
+| Versión           | Fecha       | Responsable       | Aprobado por                       |
+| ----------------- | ----------- | ----------------- | ---------------------------------- |
+| `SRS_V1.0.2.pdf`  | 02/07/2025  | Christian Bonifaz | Marcelo Acuña y Abner Arboleda     |
 
-Estas versiones reflejan la evolución del documento conforme al proceso de análisis y validación de requisitos. Cada versión corresponde a una revisión validada en la línea base.
+Esta versión refleja el estado actual del documento de especificación de requisitos, validado y aprobado en la línea base.
