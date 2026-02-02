@@ -37,8 +37,10 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del Diseño de Arquitectura
 
-| Versión          | Fecha      | Responsable   | Aprobado por                      |
-| ---------------- | ---------- | ------------- | --------------------------------- |
-| `ARQ_V1.0.0.pdf` | 28/07/2025 | Marcelo Acuña | Abner Arboleda, Christian Bonifaz |
+| Versión                | Fecha      | Responsable   | Aprobado por                      |
+| ---------------------- | ---------- | ------------- | --------------------------------- |
+| `ARQ_V1.0.0.pdf`       | 28/07/2025 | Marcelo Acuña | Abner Arboleda, Christian Bonifaz |
+| `ARQ_V1.0.1.pdf`       | 28/07/2025 | Marcelo Acuña | Abner Arboleda, Christian Bonifaz |
+| `ARQ_Anexo_V1.0.1.pdf` | 28/07/2025 | Marcelo Acuña | Abner Arboleda, Christian Bonifaz |
 
 Estas versiones reflejan la evolución continua del diseño de arquitectura, validado y aprobado para el seguimiento del proyecto.

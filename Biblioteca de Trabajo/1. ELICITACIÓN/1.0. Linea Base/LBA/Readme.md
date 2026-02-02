@@ -1,44 +1,46 @@
-# Línea Base de Análisis (LBA)
+# Diagrama de Clases del Sistema (DC)
 
-Este directorio contiene los documentos que forman parte del Elemento de Configuración del Software (ECS) relacionado con el análisis del proyecto **Healthy+**.
+Este directorio contiene los documentos que forman parte del Elemento de Configuración del Software (ECS) relacionado con el diagrama de clases del proyecto **Healthy+**.
 
 ## Información del ECS
 
-- **Código del ECS:** LBA
-- **Nombre del ECS:** Línea Base de Análisis
+- **Código del ECS:** DC
+- **Nombre del ECS:** Diagrama de Clases
 - **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 - **Proyecto:** Healthy+
-- **Línea base:** LBA - Línea Base Análisis
-- **Tipo de ECS:** Documento (PDF, PUML)
-- **Fecha de creación:** 08/01/2026
+- **Línea base:** LBD - Línea Base Diseño
+- **Tipo de ECS:** Documento (PDF)
+- **Fecha de creación:** 28/07/2025
 - **ID del proyecto:** 27837_G1_ADS
 
 ## Líneas Base Relacionadas
 
-- **LBA - Análisis:** Contiene diagramas de actividades y documentación de análisis funcional y de procesos
+- **LBA - Análisis:** Contiene diagramas de clases
 - **LBC - Implementación:** Contiene código fuente frontend y backend del proyecto
-- **LBD - Diseño:** Contiene diagramas de flujo y diagramas de casos de uso
-- **LBR - Requisitos:** Contiene la especificación completa de requisitos y diagramas de flujo
+- **LBD - Diseño:** Contiene diagramas de casos de uso
+- **LBR - Requisitos:** Contiene la especificación completa de requisitos
 
 ## Contenido Principal
 
-- Diagramas de actividades
-- Documentación de análisis funcional
-- Análisis de procesos del sistema
-- Diagramas de clases de análisis
+- Diagramas UML de clases
+- Estructura del sistema
+- Atributos y métodos de clases
+- Relaciones entre clases (herencia, composición, agregación)
 
 ## Fecha de inicio:
 
-08 de enero de 2026
+28 de julio de 2025
 
 ## Responsables:
 
 Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
-# Historial de Versiones de Análisis
+# Historial de Versiones del Diagrama de Clases
 
-| Versión          | Fecha      | Responsable   | Aprobado por                       |
-| ---------------- | ---------- | ------------- | ---------------------------------- |
-| `LBA_V1.0.0.pdf` | 12/06/2025 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
+| Versión               | Fecha      | Responsable       | Aprobado por   |
+| --------------------- | ---------- | ----------------- | -------------- |
+| `DC_V1.0.0.pdf`       | 28/07/2025 | Christian Bonifaz | Abner Arboleda |
+| `DC_V1.0.1.pdf`       | 28/07/2025 | Christian Bonifaz | Abner Arboleda |
+| `DC_Anexo_V1.0.1.pdf` | 28/07/2025 | Christian Bonifaz | Abner Arboleda |
 
-Estas versiones reflejan la evolución continua del análisis, validado y aprobado para el seguimiento del proyecto.
+Estas versiones reflejan la evolución continua del diagrama de clases, validado y aprobado para el seguimiento del proyecto.
