@@ -44,5 +44,6 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 | `PGC_V1.0.pdf` | 21/01/2026 | Marcelo Acuña     | Abner Arboleda    |
 | `PGC_V1.1.pdf` | 25/01/2026 | Abner Arboleda    | Christian Bonifaz |
 | `PGC_V1.2.pdf` | 01/02/2026 | Christian Bonifaz | Abner Arboleda    |
+| `PGC_COMPILATIO_V1.2.pdf` | 01/02/2026 | Christian Bonifaz | Abner Arboleda    |
 
 Estas versiones reflejan la evolución continua del Plan de Gestión de la Calidad, validado y aprobado para el seguimiento del proyecto.
