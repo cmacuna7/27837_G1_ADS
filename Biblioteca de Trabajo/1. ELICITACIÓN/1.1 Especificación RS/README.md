@@ -41,5 +41,6 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 | ---------------------- | ---------- | ----------------- | ---------------------------------- |
 | `ERS_Anexo_V1.0.0.pdf` | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
 | `ERS_V1.0.0.pdf`       | 12/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
+| `ERS_V1.0.1.pdf`       | 02/06/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
 
 Estas versiones reflejan la evolución del documento conforme al proceso de análisis y validación de requisitos. Cada versión corresponde a una revisión en desarrollo.
