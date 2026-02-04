@@ -2,14 +2,16 @@
 
 Aquí se encuentra todo el código fuente y scripts del proyecto Healthy+, organizado para el desarrollo y pruebas.
 
-
-
 ## Contenido principal:
 
-* Código fuente frontend y backend
-* Configuraciones y archivos del proyecto (package.json, eslint.config.js, etc.)
-* Recursos públicos y páginas React
-* Servicios y contextos para la lógica de la aplicación
+* Código fuente frontend con arquitectura MVC
+* Configuraciones y archivos del proyecto (package.json, jest.config.js, .babelrc, etc.)
+* Tests unitarios completos
+* Servicios y controladores para la lógica de la aplicación
+
+## Archivos:
+
+* `IMPL_V1.0.2/` - Implementación versión 1.0.2 (última versión)
 
 ## Fecha de inicio:
 
@@ -17,5 +19,9 @@ Aquí se encuentra todo el código fuente y scripts del proyecto Healthy+, organ
 
 ## Responsables:
 
-Marcelo Acuña, Abner Arboleda, Christian Bonifaz
+Marcelo Acuña, Abner Arboleda
+
+## Aprobado por:
+
+Christian Bonifaz
 

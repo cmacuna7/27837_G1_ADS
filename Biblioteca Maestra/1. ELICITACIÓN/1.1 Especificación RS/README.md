@@ -33,12 +33,12 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Responsables:
 
-Marcelo Acuña, Abner Arboleda, Christian Bonifaz
+Marcelo Acuña, Abner Arboleda
 
 # Historial de Versiones del SRS
 
 | Versión          | Fecha      | Responsable       | Aprobado por                     |
 | ---------------- | ---------- | ----------------- | -------------------------------- |
-| `SRS_V1.0.2.pdf` | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda   |
+| `ERS_V1.0.0.pdf` | 02/07/2025 | Marcelo Acuña | Christian Bonifaz   |
 
 Esta versión refleja el estado actual del documento de especificación de requisitos, validado y aprobado en la línea base.

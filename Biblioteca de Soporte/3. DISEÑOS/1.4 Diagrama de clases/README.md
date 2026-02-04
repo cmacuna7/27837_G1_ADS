@@ -37,8 +37,9 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del Diagrama de Clases
 
-| Versión         | Fecha      | Responsable       | Aprobado por   |
-| --------------- | ---------- | ----------------- | -------------- |
-| `DC_V1.0.0.pdf` | 15/12/2025 | Christian Bonifaz | Abner Arboleda |
+| Versión               | Fecha      | Responsable       | Aprobado por      |
+| --------------------- | ---------- | ----------------- | ----------------- |
+| `DC_V1.0.1.pdf`       | 28/07/2025 | Christian Bonifaz | Christian Bonifaz |
+| `DC_Anexo_V1.0.1.png` | 28/07/2025 | Christian Bonifaz | Christian Bonifaz |
 
-Esta versión refleja el estado actual del diagrama de clases, validado y aprobado para el seguimiento del proyecto.
+Estas versiones reflejan el estado actual del diagrama de clases en desarrollo.

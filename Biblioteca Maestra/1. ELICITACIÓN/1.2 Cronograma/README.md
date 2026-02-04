@@ -33,12 +33,12 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Responsables:
 
-Marcelo Acuña, Abner Arboleda, Christian Bonifaz
+Marcelo Acuña, Abner Arboleda
 
 # Historial de Versiones del Cronograma
 
-| Versión                  | Fecha      | Responsable   | Aprobado por                       |
-| ------------------------ | ---------- | ------------- | ---------------------------------- |
-| `Cronograma_V1.0.0.xlsx` | 12/06/2025 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
+| Versión               | Fecha      | Responsable   | Aprobado por      |
+| --------------------- | ---------- | ------------- | ----------------- |
+| `CRON_V2.0.0.xlsx`    | 12/06/2025 | Marcelo Acuña | Christian Bonifaz |
 
 Esta versión refleja el estado actual del cronograma del proyecto, validado y aprobado como parte de la gestión del proyecto.

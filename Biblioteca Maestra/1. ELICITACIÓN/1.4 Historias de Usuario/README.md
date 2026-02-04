@@ -33,12 +33,12 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Responsables:
 
-Marcelo Acuña, Abner Arboleda, Christian Bonifaz
+Marcelo Acuña, Abner Arboleda
 
 # Historial de Versiones de las Historias de Usuario
 
-| Versión          | Fecha      | Responsable   | Aprobado por                       |
-| ---------------- | ---------- | ------------- | ---------------------------------- |
-| `HU_V1.0.3.xlsx` | 10/01/2026 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
+| Versión          | Fecha      | Responsable   | Aprobado por      |
+| ---------------- | ---------- | ------------- | ----------------- |
+| `HU_V1.0.2.xlsx` | 10/01/2026 | Marcelo Acuña | Christian Bonifaz |
 
 Esta versión refleja el estado actual de las historias de usuario, aprobada formalmente para el desarrollo del sistema.

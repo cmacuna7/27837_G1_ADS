@@ -33,13 +33,13 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Responsables:
 
-Marcelo Acuña, Abner Arboleda, Christian Bonifaz
+Marcelo Acuña, Abner Arboleda
 
 # Historial de Versiones de la Matriz IREB
 
 | Versión                     | Fecha      | Responsable    | Aprobado por      |
 |-----------------------------|------------|----------------|-------------------|
-| `Matriz_IREB_V1.0.3.xlsx`   | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda |
-| `Matriz_IREB_Informe.docx`  | 02/07/2025 | Christian Bonifaz | Marcelo Acuña y Abner Arboleda |
+| `REB_V2.0.0.xlsx`   | 02/07/2025 | Marcelo Acuña | Christian Bonifaz |
+| `REB_Informe_V1.0.0.docx`  | 02/07/2025 | Marcelo Acuña | Christian Bonifaz |
 
 Matriz de trazabilidad de requisitos con documentación complementaria que valida formalmente la especificación en la línea base de requisitos.

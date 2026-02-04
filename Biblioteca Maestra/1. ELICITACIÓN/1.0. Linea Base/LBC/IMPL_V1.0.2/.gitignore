@@ -1,0 +1,24 @@
+# Ignorar node_modules
+node_modules/
+
+# Ignorar reportes de cobertura
+coverage/
+.nyc_output/
+
+# Ignorar archivos de cache
+.cache/
+*.log
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignorar archivos temporales
+*.tmp
+*.temp

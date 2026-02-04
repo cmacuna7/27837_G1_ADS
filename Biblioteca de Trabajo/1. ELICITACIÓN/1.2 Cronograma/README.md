@@ -9,7 +9,7 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 - **Autor:** Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 - **Proyecto:** Healthy+
 - **Línea base:** PDP - Plan de Desarrollo del Proyecto
-- **Tipo de ECS:** Documento (XLSX)
+- **Tipo de ECS:** Documento (PDF)
 - **Fecha de creación:** 08/01/2026
 - **ID del proyecto:** 27837_G1_ADS
 
@@ -39,7 +39,7 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 | Versión            | Fecha      | Responsable       | Aprobado por                       |
 | ------------------ | ---------- | ----------------- | ---------------------------------- |
-| `CRON_V1.0.0.xlsx` | 05/12/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
-| `CRON_V2.0.0.xlsx` | 02/02/2026 | Christian Bonifaz | Abner Arboleda                     |
+| `CRON_V1.0.0.xlsx` | 12/12/2025 | Marcelo Acuña     | Abner Arboleda y Christian Bonifaz |
+| `CRON_V2.0.0.xlsx` | 01/02/2026 | Christian Bonifaz | Abner Arboleda                     |
 
 Estas versiones reflejan la evolución del cronograma del proyecto conforme al avance y cambios en el plan de desarrollo. Cada versión ha sido validada y aprobada como parte de la gestión del proyecto.

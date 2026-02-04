@@ -39,7 +39,7 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 | Versión         | Fecha      | Responsable   | Aprobado por      |
 | --------------- | ---------- | ------------- | ----------------- |
-| `CU_V1.0.1.pdf` | 15/12/2025 | Marcelo Acuña | Abner Arboleda    |
+| `CU_V1.0.1.pdf` | 15/12/2025 | Marcelo Acuña | Christian Bonifaz |
 
 Esta versión refleja el estado actual de los casos de uso extendido, validado y aprobado para el seguimiento del proyecto.
 

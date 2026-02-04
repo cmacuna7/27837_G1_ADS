@@ -2,14 +2,14 @@
 
 En esta carpeta están los documentos gráficos y diagramas que representan el diseño del sistema.
 
-
-
 ## Contenido principal:
 
 * Diagramas de Flujo
 * Diagramas de casos de uso
 
+## Archivos:
 
+* `CU_V1.0.1.pdf` - Casos de Uso (Versión 1.0.1)
 
 ## Fecha de inicio:
 
@@ -17,5 +17,9 @@ En esta carpeta están los documentos gráficos y diagramas que representan el d
 
 ## Responsables:
 
-Marcelo Acuña, Abner Arboleda, Christian Bonifaz
+Marcelo Acuña, Abner Arboleda
+
+## Aprobado por:
+
+Christian Bonifaz
 

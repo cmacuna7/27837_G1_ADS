@@ -33,12 +33,12 @@ Este directorio contiene los documentos que forman parte del Elemento de Configu
 
 ## Responsables:
 
-Marcelo Acuña, Abner Arboleda, Christian Bonifaz
+Marcelo Acuña, Abner Arboleda
 
 # Historial de Versiones del Diagrama de Clases
 
-| Versión         | Fecha      | Responsable       | Aprobado por   |
-| --------------- | ---------- | ----------------- | -------------- |
-| `DC_V1.0.0.pdf` | 15/12/2025 | Christian Bonifaz | Abner Arboleda |
+| Versión         | Fecha      | Responsable   | Aprobado por      |
+| --------------- | ---------- | ------------- | ----------------- |
+| `DC_V1.0.1.pdf` | 15/12/2025 | Marcelo Acuña | Christian Bonifaz |
 
 Esta versión refleja el estado actual del diagrama de clases, validado y aprobado para el seguimiento del proyecto.

@@ -37,8 +37,8 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del Backlog
 
-| Versión          | Fecha      | Responsable       | Aprobado por  |
-| ---------------- | ---------- | ----------------- | ------------- |
-| `BL_V2.0.0.xlsx` | 21/08/2025 | Christian Bonifaz | Marcelo Acuña |
+| Versión          | Fecha      | Responsable       | Aprobado por      |
+| ---------------- | ---------- | ----------------- | ----------------- |
+| `BL_V2.0.0.xlsx` | 21/08/2025 | Christian Bonifaz | Christian Bonifaz |
 
 Esta versión refleja el estado actual del backlog del producto, validado y aprobado para el seguimiento del proyecto.

@@ -37,8 +37,9 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del Patrón de Diseño
 
-| Versión          | Fecha      | Responsable   | Aprobado por                       |
-| ---------------- | ---------- | ------------- | ---------------------------------- |
-| `PAT_V1.0.0.pdf` | 28/07/2025 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
+| Versión                | Fecha      | Responsable    | Aprobado por      |
+| ---------------------- | ---------- | -------------- | ----------------- |
+| `PAT_V1.0.1.pdf`       | 01/02/2026 | Abner Arboleda | Christian Bonifaz |
+| `PAT_Anexo_V1.0.1.png` | 01/02/2026 | Abner Arboleda | Christian Bonifaz |
 
-Esta versión refleja el estado actual del patrón de diseño, validado y aprobado para el seguimiento del proyecto.
+Estas versiones reflejan el estado actual del patrón de diseño, validado y aprobado para el seguimiento del proyecto.

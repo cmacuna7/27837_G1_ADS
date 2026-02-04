@@ -37,8 +37,9 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones del SRS
 
-| Versión           | Fecha       | Responsable       | Aprobado por                       |
-| ----------------- | ----------- | ----------------- | ---------------------------------- |
-| `SRS_V1.0.2.pdf`  | 02/07/2025  | Christian Bonifaz | Marcelo Acuña y Abner Arboleda     |
+| Versión                | Fecha      | Responsable   | Aprobado por      |
+| ---------------------- | ---------- | ------------- | ----------------- |
+| `ERS_Anexo_V1.0.0.pdf` | 12/06/2025 | Marcelo Acuña | Christian Bonifaz |
+| `ERS_V1.0.0.pdf`       | 12/06/2025 | Marcelo Acuña | Christian Bonifaz |
 
-Esta versión refleja el estado actual del documento de especificación de requisitos, validado y aprobado en la línea base.
+Estas versiones reflejan la evolución del documento conforme al proceso de análisis y validación de requisitos. Cada versión corresponde a una revisión en desarrollo.

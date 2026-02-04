@@ -37,8 +37,8 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 # Historial de Versiones de las Historias de Usuario
 
-| Versión          | Fecha      | Responsable   | Aprobado por                       |
-| ---------------- | ---------- | ------------- | ---------------------------------- |
-| `HU_V1.0.3.xlsx` | 10/01/2026 | Marcelo Acuña | Abner Arboleda y Christian Bonifaz |
+| Versión          | Fecha      | Responsable       | Aprobado por      |
+| ---------------- | ---------- | ----------------- | ----------------- |
+| `HU_V1.0.2.xlsx` | 02/07/2025 | Christian Bonifaz | Christian Bonifaz |
 
-Esta versión refleja el estado actual de las historias de usuario, aprobada formalmente para el desarrollo del sistema.
+Esta versión refleja el estado actual y refinamiento final de las historias de usuario en desarrollo.
