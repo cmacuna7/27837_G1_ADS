@@ -39,6 +39,6 @@ Marcelo Acuña, Abner Arboleda, Christian Bonifaz
 
 | Versión            | Fecha      | Responsable       | Aprobado por      |
 | ------------------ | ---------- | ----------------- | ----------------- |
-| `CRON_V2.0.0.xlsx` | 01/02/2026 | Christian Bonifaz | Christian Bonifaz |
+| `CRON_V3.0.0.xlsx` | 01/02/2026 | Christian Bonifaz | Christian Bonifaz |
 
 Esta versión refleja el estado actual del cronograma del proyecto conforme al avance y cambios en el plan de desarrollo. Ha sido validada y aprobada como parte de la gestión del proyecto.
